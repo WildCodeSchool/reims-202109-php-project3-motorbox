@@ -15,44 +15,44 @@ class Vehicle
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
      */
-    private $id;
+    private int $id;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $name;
+    private string $name;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $brand;
+    private string $brand;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $model;
+    private string $model;
 
     /**
      * @ORM\Column(type="smallint")
      */
-    private $productYear;
+    private int $productYear;
 
     /**
      * @ORM\Column(type="decimal", precision=7, scale=2)
      */
-    private $usedHour;
+    private string $usedHour;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $idMotorbox;
+    private string|null $idMotorbox;
 
-    public function getId(): ?int
+    public function getId(): int
     {
         return $this->id;
     }
 
-    public function getName(): ?string
+    public function getName(): string
     {
         return $this->name;
     }
@@ -64,7 +64,7 @@ class Vehicle
         return $this;
     }
 
-    public function getBrand(): ?string
+    public function getBrand(): string
     {
         return $this->brand;
     }
@@ -76,7 +76,7 @@ class Vehicle
         return $this;
     }
 
-    public function getModel(): ?string
+    public function getModel(): string
     {
         return $this->model;
     }
@@ -88,7 +88,7 @@ class Vehicle
         return $this;
     }
 
-    public function getProductYear(): ?int
+    public function getProductYear(): int
     {
         return $this->productYear;
     }
