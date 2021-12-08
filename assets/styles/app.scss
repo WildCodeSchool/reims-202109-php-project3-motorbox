@@ -8,22 +8,33 @@
 }
 
 body {
-    background-color: $wild-color;
-    color: $light;
+    background-color: $bg-color;
+    color: $color-1;
 }
 
-.home-page{
+.login-page{
     display: flex;
     flex-direction: column;
 }
-.logo{
-    width: 20rem;
-}
 
 .logo-container{
+    margin-bottom: 4rem;
     text-align: center;
 }
 
-.home-page-button{
-    text-align: center;
+.logo{
+    width: 100%;
+}
+
+.login-button-container{
+    text-align: center;    
+}
+
+.login-button{
+    background-color: $color-3;
+    font-size: 1em;
+    border-radius: 2rem;
+    width: 60vw;
+    height: 10vh;
+    margin-bottom: 4rem;
 }
