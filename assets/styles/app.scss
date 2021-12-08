@@ -1,7 +1,29 @@
 @import 'variables.scss';
 
-body {
+*, *::after, *::before {
     margin:0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
     background-color: $wild-color;
     color: $light;
+}
+
+.home-page{
+    display: flex;
+    flex-direction: column;
+}
+.logo{
+    width: 20rem;
+}
+
+.logo-container{
+    text-align: center;
+}
+
+.home-page-button{
+    text-align: center;
 }
