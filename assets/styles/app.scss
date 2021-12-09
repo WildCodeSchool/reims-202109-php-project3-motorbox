@@ -6,16 +6,48 @@ body {
     min-height: 100vh;
 }
 
-.home .box {
-    background-color:$color-3;
-    width: 60vw;
+button {
+    background-color: green;
+    border: none;
+}
+
+.box {
     opacity: 0.8;
+    background-color: $color-3;
     border: white thin ;
+    text-align: center;
     border-radius: 4px;
+}
+
+.home .box {
+    width: 60vw;
     margin-left: calc(20% - 2rem);
     margin-right: calc(20% - 2rem);
     margin-top: 2rem;
     margin-bottom: 2rem;
-    text-align: center;
     padding: 2rem;
+}
+
+.addVehicle {
+    margin-left: 5%;
+    text-align: start;
+}
+
+.addVehicle .selectBox {
+    width: 60vw;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.addVehicle .inputBox{
+    width: calc(90vw - 2rem);
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.addVehicle .button{
+    width: 90vw;
+    padding: 1rem;
+    position: fixed;
+    bottom: 1rem;
 }
