@@ -3,6 +3,8 @@ includes:
     - vendor/phpstan/phpstan-doctrine/rules.neon
     - vendor/phpstan/phpstan-symfony/extension.neon
 parameters:
+    doctrine:
+        objectManagerLoader: tests/object-manager.php
     excludePaths:
         - src/DataFixtures
         - src/Security

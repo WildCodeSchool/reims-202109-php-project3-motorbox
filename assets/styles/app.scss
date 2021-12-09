@@ -9,7 +9,24 @@
 body {
     background-color: $bg-color;
     color: $color-1;
+    min-height: 100vh;
+  
 }
+
+.home .box {
+    background-color:$color-3;
+    width: 60vw;
+    opacity: 0.8;
+    border: white thin ;
+    border-radius: 4px;
+    margin-left: calc(20% - 2rem);
+    margin-right: calc(20% - 2rem);
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    padding: 2rem;
+}
+
 // ---------------------------------Landing page------------------------------------ //
 
 .landing-page{
@@ -17,12 +34,12 @@ body {
     flex-direction: column;
 }
 
-.logo-container{
+.landing-page .logo-container{
     margin-bottom: 4rem;
     text-align: center;
 }
 
-.logo{
+.landing-page .logo{
     width: 100%;
 }
 
@@ -38,4 +55,5 @@ body {
     height: 10vh;
     margin-bottom: 4rem;
 }
+
 // ---------------------------------End Landing page------------------------------------ //
