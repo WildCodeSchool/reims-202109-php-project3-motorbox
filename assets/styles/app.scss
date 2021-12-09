@@ -24,7 +24,7 @@ body {
 
 .nameMotor .box {
     background-color:$color-3;
-    width: 47vw;
+    width: 10rem;
     opacity: 0.8;
     border-radius: 4px;
     margin-left: auto;
@@ -35,10 +35,6 @@ body {
     padding: 2rem;
 }
 
-.nameMotor p {
-    margin-top:2rem;
-}
-
 .parts {
     display: flex;
     flex-direction: column;
@@ -47,21 +43,21 @@ body {
 
 .parts h2 {
     background-color: $color-3;
-    width: 45%;
+    width: 12rem;
     border-radius: 3px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     text-align: center;
     padding: 7px;
     font-size: 1rem;
 }
 .parts progress {
-    width: 80%;
+    width: 100%;;
 }
 
-.namePart p {
+.namePart label {
     background-color: #A5A5A5;
     border-radius: 1px;
     margin-left: auto;
@@ -70,7 +66,6 @@ body {
     margin-bottom: 0.5rem;
     padding: 6px;
     text-align: center;
-    width: 100%;
 }
 
 .namePart input {
@@ -82,7 +77,8 @@ body {
 }
 
 progress{
-    margin-top: 2px;
+    margin-top: 1.3rem;
+    margin-bottom: 1.2rem;
 }
 
 progress.alert::-moz-progress-bar { background: red; }
