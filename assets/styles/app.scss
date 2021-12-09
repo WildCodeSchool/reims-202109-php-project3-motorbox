@@ -82,8 +82,20 @@ body {
 }
 
 progress{
-  margin-top: 2px;
+    margin-top: 2px;
 }
+
+progress.alert::-moz-progress-bar { background: red; }
+progress.alert::-webkit-progress-value { background: red; }
+progress.alert { color: red; }
+
+progress.warning::-moz-progress-bar { background: orange; }
+progress.warning::-webkit-progress-value { background: orange; }
+progress.warning { color: orange; }
+
+progress.ok::-moz-progress-bar { background: green; }
+progress.ok::-webkit-progress-value { background: green; }
+progress.ok { color: green; }
 
 ::-moz-progress-bar{
     background-color: RED;
@@ -118,4 +130,5 @@ progress{
     padding-left: 6.5rem;
     font-size: 1rem;
 }
+
 /* end page part/show.html.twig*/
