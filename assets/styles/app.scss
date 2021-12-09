@@ -19,3 +19,40 @@ body {
     text-align: center;
     padding: 2rem;
 }
+
+/* Page /Parts in show.html.twig */
+
+.parts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.parts h2 {
+    background-color: $color-3;
+    width: 60vw;
+    opacity: 0.8;
+    border: white thin;
+    border-radius: 3px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    padding: 7px;
+}
+
+progress{
+  margin-top: 2px;
+}
+
+.buttonReplace {
+    border-radius: 34px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    padding: 1rem;
+    background-color: $color-2;
+}
