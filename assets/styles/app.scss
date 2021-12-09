@@ -40,14 +40,14 @@ body {
 }
 
 .parts {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .parts h2 {
     background-color: $color-3;
-    width: 60vw;
+    width: 45%;
     border-radius: 3px;
     margin-left: auto;
     margin-right: auto;
@@ -57,6 +57,9 @@ body {
     padding: 7px;
     font-size: 1rem;
 }
+.parts progress {
+    width: 80%;
+}
 
 .namePart p {
     background-color: #A5A5A5;
@@ -64,21 +67,35 @@ body {
     margin-left: auto;
     margin-right: auto;
     margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     padding: 6px;
     text-align: center;
-    width: 45%;
+    width: 100%;
 }
 
 .namePart input {
     display: none;
 }
 
+.containerProgress{
+    width:60vh;
+}
 
 progress{
-  margin-top: 2px;
-  padding-right:10rem;
+    margin-top: 2px;
 }
+
+progress.alert::-moz-progress-bar { background: red; }
+progress.alert::-webkit-progress-value { background: red; }
+progress.alert { color: red; }
+
+progress.warning::-moz-progress-bar { background: orange; }
+progress.warning::-webkit-progress-value { background: orange; }
+progress.warning { color: orange; }
+
+progress.ok::-moz-progress-bar { background: green; }
+progress.ok::-webkit-progress-value { background: green; }
+progress.ok { color: green; }
 
 ::-moz-progress-bar{
     background-color: RED;
@@ -113,4 +130,5 @@ progress{
     padding-left: 6.5rem;
     font-size: 1rem;
 }
+
 /* end page part/show.html.twig*/
