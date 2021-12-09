@@ -29,8 +29,7 @@ button {
 }
 
 .addVehicle {
-    margin-left: 5%;
-    text-align: start;
+    padding: 1em;
 }
 
 .addVehicle .selectBox {
@@ -40,14 +39,23 @@ button {
 }
 
 .addVehicle .inputBox{
-    width: calc(90vw - 2rem);
     padding: 1rem;
     margin-top: 1rem;
 }
 
+.moto-input {
+    padding: .4rem;
+}
+
+.addVehicle .inputBox .input {
+    padding: .5rem;
+}
+
 .addVehicle .button{
-    width: 90vw;
-    padding: 1rem;
+    padding-left: calc(45vw - 1rem);
+    padding-right: calc(45vw - 1rem);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     position: fixed;
     bottom: 1rem;
 }
