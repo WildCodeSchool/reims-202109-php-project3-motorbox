@@ -3,35 +3,37 @@
 {% block body %}
 
     <section class="addVehicle">
-        <section class="box selectBox">
-            <label for="brand-select">Sélectionner la marque de votre Véhicule : </label>
-            <select name="brand" id="brand-select">
-                <option value="">Marque</option>
-                <option value="suzuki">Suzuki</option>
-            </select>
-        </section>
-        <section class="box selectBox">
-            <label for="model-select" >Sélectionner le modèle de votre Véhicule : </label>
-            <select name="model" id="model-select">
-                <option value="">Modèle</option>
-                <option value="gsx-s_950">GSX-S 950</option>
-            </select>
-        </section>
-        <section class="box selectBox">
-            <label for="year-select" >Sélectionner l'année de votre Véhicule : </label>
-            <select name="year" id="year-select">
-                <option value="">Année</option>
-                <option value="2021">2021</option>
-            </select>
-        </section>
-        <section class="box inputBox">
-            <label for="moto-name">Nom de la moto : </label>
-            <input type="text" name="name" id="moto-name">
-        </section>
-        <section class="box inputBox">
-            <p>Nombre d'heure d'utilisation de la moto : </p>
-            <input type="text" name="usage" id="moto-usage">
-        </section>
+        <form action="" method="post">
+            <section class="box selectBox">
+                <label for="brand-select">Sélectionner la marque de votre Véhicule : </label>
+                <select name="brand" id="brand-select">
+                    <option value="">Marque</option>
+                    <option value="suzuki">Suzuki</option>
+                </select>
+            </section>
+            <section class="box selectBox">
+                <label for="model-select" >Sélectionner le modèle de votre Véhicule : </label>
+                <select name="model" id="model-select">
+                    <option value="">Modèle</option>
+                    <option value="gsx-s_950">GSX-S 950</option>
+                </select>
+            </section>
+            <section class="box selectBox">
+                <label for="year-select" >Sélectionner l'année de votre Véhicule : </label>
+                <select name="year" id="year-select">
+                    <option value="">Année</option>
+                    <option value="2021">2021</option>
+                </select>
+            </section>
+            <section class="box inputBox">
+                <label for="moto-name">Nom de la moto : </label>
+                <input type="text" name="name" id="moto-name">
+            </section>
+            <section class="box inputBox">
+                <p>Nombre d'heure d'utilisation de la moto : </p>
+                <input type="text" name="usage" id="moto-usage">
+            </section>
+        </form>
         <button class="button">Suivant</button>
     </section>
 
