@@ -1,17 +1,17 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-<section class="home">
+<section class="nameMotor">
     <p class="box"> Moto de Baptiste <br> KTM 125 sx </p>
 </section>
 
 <div class="flex parts">
-    <h2>nombre d'heure</h2>
+    <h2>Nombre d'heure</h2>
 
     <div class="namePart">
         <label for="partOne">
             <p>nom de pièce</p>
-            <progress value = "43" max = "100"> </progress>
+            <progress value = "70" max = "100"> </progress>
             <input type="checkbox" name="my-checkbox" id="partOne">
         </label>
     </div>
@@ -19,7 +19,7 @@
     <div class="namePart">
         <label for="partTwo">
             <p>nom de pièce</p>
-            <progress value = "43" max = "100"> </progress>
+            <progress value = "100" max = "100"> </progress>
             <input type="checkbox" name="my-checkbox" id="partTwo">
         </label>
     </div>
@@ -40,10 +40,11 @@
         </label>
     </div>
 
-    <div class="buttonReplace">
-        <button type="submit">remplacer pièce</button>
+    <div >
+        <button class="buttonReplace" type="submit">Remplacer pièce</button>
     </div>
-    <div class="buttonAddPiece">
-        <button type="submit">ajout pièce</button>
+    <div>
+        <button class="buttonAddPiece" type="submit">Ajouter pièce</button>
     </div>
+</div>
 {% endblock %}
