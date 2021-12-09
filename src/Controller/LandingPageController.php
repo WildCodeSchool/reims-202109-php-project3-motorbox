@@ -7,10 +7,10 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * @Route("/login", name="home")
+ * @Route("/landing", name="home")
  */
 
-class LoginPageController extends AbstractController
+class LandingPageController extends AbstractController
 {
     /**
      * @Route("/", name="index")
@@ -18,6 +18,6 @@ class LoginPageController extends AbstractController
      */
     public function index(): Response
     {
-        return $this->render('home/loginpage.html.twig');
+        return $this->render('home/landingpage.html.twig');
     }
 }
