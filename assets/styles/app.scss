@@ -1,9 +1,16 @@
 @import 'variables.scss';
 
-body {
+*, *::after, *::before {
     margin:0;
-    background-color: #000014;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $bg-color;
+    color: $color-1;
     min-height: 100vh;
+  
 }
 
 .home .box {
@@ -20,6 +27,7 @@ body {
     padding: 2rem;
 }
 
+<<<<<<< HEAD
 /* Page /Parts in show.html.twig */
 
 .nameMotor .box {
@@ -129,3 +137,35 @@ progress.ok { color: green; }
 }
 
 /* end page part/show.html.twig*/
+=======
+// ---------------------------------Landing page------------------------------------ //
+
+.landing-page{
+    display: flex;
+    flex-direction: column;
+}
+
+.landing-page .logo-container{
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+.landing-page .logo{
+    width: 100%;
+}
+
+.landing-button-container{
+    text-align: center;
+}
+
+.landing-button{
+    background-color: $color-3;
+    font-size: 1em;
+    border-radius: 2rem;
+    width: 60vw;
+    height: 10vh;
+    margin-bottom: 4rem;
+}
+
+// ---------------------------------End Landing page------------------------------------ //
+>>>>>>> 6e73cc7445009ed4e1cc9b8a1cc96eecf5f0a28b
