@@ -2,7 +2,9 @@
 
 {% block body %}
     <section class="home">
-        <p class="box"> Moto de Baptiste <br> KTM 125 sx </p>
-        <p class="box"> Ajouter </p>
+        {# {% for vehicle in Vehicles %}
+            <p class="box">{{vehicle.name}}<br>{{vehicle.model}}</p>
+        {% endfor %} #}
+        <a class="aBox" href="/addVehicle"> Ajouter </a>
     </section>
 {% endblock %}
