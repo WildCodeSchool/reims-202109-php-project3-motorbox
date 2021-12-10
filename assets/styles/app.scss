@@ -10,43 +10,7 @@ body {
     background-color: $bg-color;
     color: $color-1;
     min-height: 100vh;
-  
 }
-
-// ---------------------------------Landing page------------------------------------ //
-
-.landing-page{
-    display: flex;
-    flex-direction: column;
-}
-
-.landing-page .logo-container{
-    margin-bottom: 2rem;
-    text-align: center;
-}
-
-.landing-page .logo{
-    width: 100%;
-}
-
-
-.landing-button-container{
-    display: flex;
-    flex-direction: column;
-}
-
-.landing-button{
-    background-color: $color-3;
-    font-size: 1em;
-    border-radius: 2rem;
-    padding: 2rem;
-    margin: 2rem;
-    text-align: center;
-    color: $bg-color;
-    text-decoration: none;
-}
-
-// ---------------------------------End Landing page------------------------------------ //
 
 button {
     background-color: green;
@@ -72,6 +36,145 @@ button {
     padding: 2rem;
 }
 
+/* Page /Parts in show.html.twig */
+
+.nameMotor .box {
+    background-color:$color-3;
+    width: 10rem;
+    opacity: 0.8;
+    border-radius: 4px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    padding: 2rem;
+}
+
+.parts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.parts h2 {
+    background-color: $color-3;
+    width: 12rem;
+    border-radius: 3px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    padding: 7px;
+    font-size: 1rem;
+}
+
+.parts progress {
+    width: 100%;;
+}
+
+.namePart label {
+    background-color: #A5A5A5;
+    border-radius: 1px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    padding: 6px;
+    text-align: center;
+}
+
+.namePart input {
+    display: none;
+}
+
+.containerProgress{
+    width:60vh;
+}
+
+progress{
+    margin-top: 1.3rem;
+    margin-bottom: 1.2rem;
+}
+
+progress.alert::-moz-progress-bar { background: red; }
+progress.alert::-webkit-progress-value { background: red; }
+progress.alert { color: red; }
+
+progress.warning::-moz-progress-bar { background: orange; }
+progress.warning::-webkit-progress-value { background: orange; }
+progress.warning { color: orange; }
+
+progress.ok::-moz-progress-bar { background: green; }
+progress.ok::-webkit-progress-value { background: green; }
+progress.ok { color: green; }
+
+::-moz-progress-bar{
+    background-color: RED;
+}
+
+.buttonReplace {
+    border-radius: 3px;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    text-align: center;
+    padding: 1rem;
+    background-color: $color-2;
+    color: white;
+    padding-right: 6rem;
+    padding-left: 6rem;
+    font-size: 1rem;
+}
+
+.buttonAddPiece {
+    border-radius: 3px;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+    text-align: center;
+    padding: 1rem;
+    background-color: #235E9C;
+    color: white;
+    padding-right: 6.5rem;
+    padding-left: 6.5rem;
+    font-size: 1rem;
+}
+
+/* end page part/show.html.twig*/
+// ---------------------------------Landing page------------------------------------ //
+
+.landing-page{
+    display: flex;
+    flex-direction: column;
+}
+
+.landing-page .logo-container{
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+.landing-page .logo{
+    width: 100%;
+}
+
+.landing-button-container{
+    text-align: center;
+}
+
+.landing-button{
+    background-color: $color-3;
+    font-size: 1em;
+    border-radius: 2rem;
+    width: 60vw;
+    height: 10vh;
+    margin-bottom: 4rem;
+}
+
+// ---------------------------------End Landing page------------------------------------ //
 .home .aBox {
     opacity: 0.8;
     background-color: $color-3;

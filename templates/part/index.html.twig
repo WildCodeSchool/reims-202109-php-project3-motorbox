@@ -3,35 +3,22 @@
 {% block title %}Part index{% endblock %}
 
 {% block body %}
-    <h1>Part index</h1>
-
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Lifespan</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
+    <h2></h2>
+    <section class="nameMotor">
+        <p class="box"> {{ vehicles.0.name }} <br> {{ vehicles.0.brand }} <br> {{ vehicles.0.model }} </p>
+    </section>
+    <div class="flex parts">
+        <h2>Temps d'utilisation total : {{ vehicles.0.usedHour }}H</h2>
         {% for part in parts %}
-            <tr>
-                <td>{{ part.id }}</td>
-                <td>{{ part.name }}</td>
-                <td>{{ part.lifespan }}</td>
-                <td>
-                    <a href="{{ path('part_show', {'id': part.id}) }}">show</a>
-                    <a href="{{ path('part_edit', {'id': part.id}) }}">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="4">no records found</td>
-            </tr>
+        <div class="namePart">
+            <label for="{{ part.id }}">{{ part.name }}</label>
+            <progress value = "{{ vehicles.0.usedHour }}" max = "{{ part.lifespan }}"> </progress>
+            <input type="checkbox" name="my-checkbox" id="{{ part.id }}">
+        </div>
         {% endfor %}
-        </tbody>
-    </table>
+        <button class="buttonReplace" type="submit">Remplacer pièce</button>
+        <a class="buttonAddPiece" href="{{ path('part_new') }}">Ajouter pièce</a>
 
-    <a href="{{ path('part_new') }}">Create new</a>
+    </div>
+
 {% endblock %}
