@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<section class="nameMotor">
+    <p class="box"> Moto de Baptiste <br> KTM 125 sx </p>
+</section>
+
+<div class="flex parts">
+    <h2>Nombre d'heure</h2>
+
+    <div class="namePart">
+        <label for="partOne">nom de pièce</label>
+        <progress value = "70" max = "100"> </progress>
+        <input type="checkbox" name="my-checkbox" id="partOne">
+    </div>
+
+    <div class="namePart">
+        <label for="partTwo">nom de pièce</label>
+        <progress value = "100" max = "100"> </progress>
+        <input type="checkbox" name="my-checkbox" id="partTwo">
+    </div>
+
+    <div class="namePart">
+        <label for="partThree">nom de pièce</label>
+        <progress value = "43" max = "100"> </progress>
+        <input type="checkbox" name="my-checkbox" id="partThree">
+    </div>
+
+    <div class="namePart">
+        <label for="partFour">nom de pièce</label>
+        <progress value = "43" max = "100"> </progress>
+        <input type="checkbox" name="my-checkbox" id="partFour">
+    </div>
+
+        <button class="buttonReplace" type="submit">Remplacer pièce</button>
+        <button class="buttonAddPiece" type="submit">Ajouter pièce</button>
+</div>
+{% endblock %}
