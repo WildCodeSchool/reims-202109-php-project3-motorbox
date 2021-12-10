@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Part;
 use App\Form\PartType;
 use App\Repository\PartRepository;
+use App\Repository\VehicleRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -15,10 +16,11 @@ use Symfony\Component\Routing\Annotation\Route;
 class PartController extends AbstractController
 {
     #[Route('/', name: 'part_index', methods: ['GET'])]
-    public function index(PartRepository $partRepository): Response
+    public function index(PartRepository $partRepository, VehicleRepository $vehicleRepository): Response
     {
         return $this->render('part/index.html.twig', [
             'parts' => $partRepository->findAll(),
+            'vehicles' => $vehicleRepository->findAll(),
         ]);
     }
 

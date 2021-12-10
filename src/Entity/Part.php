@@ -27,6 +27,12 @@ class Part
      */
     private int $lifespan;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=Vehicle::class)
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private Vehicle $vehicle;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -52,6 +58,18 @@ class Part
     public function setLifespan(int $lifespan): self
     {
         $this->lifespan = $lifespan;
+
+        return $this;
+    }
+
+    public function getVehicle(): ?Vehicle
+    {
+        return $this->vehicle;
+    }
+
+    public function setVehicle(Vehicle $vehicle): self
+    {
+        $this->vehicle = $vehicle;
 
         return $this;
     }
