@@ -13,17 +13,27 @@ body {
   
 }
 
-.home .box {
-    background-color:$color-3;
-    width: 60vw;
+button {
+    background-color: green;
+    border: none;
+}
+
+.box {
     opacity: 0.8;
+    background-color: $color-3;
     border: white thin ;
+    text-align: center;
     border-radius: 4px;
-    margin-left: calc(20% - 2rem);
-    margin-right: calc(20% - 2rem);
+}
+
+.home {
+    padding: 1em;
+    width:max-content;
+}
+
+.home .box {
     margin-top: 2rem;
     margin-bottom: 2rem;
-    text-align: center;
     padding: 2rem;
 }
 
@@ -166,3 +176,47 @@ progress.ok { color: green; }
 }
 
 // ---------------------------------End Landing page------------------------------------ //
+.home .aBox {
+    opacity: 0.8;
+    background-color: $color-3;
+    border: white thin ;
+    text-align: center;
+    border-radius: 4px;
+    text-decoration: none;
+    color: black;
+    padding-left: 9rem;
+    padding-right: 9rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.addVehicle {
+    padding: 1em;
+    min-height: 100vh;
+}
+
+.addVehicle .selectBox {
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.addVehicle .inputBox{
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.moto-input {
+    padding: .4rem;
+}
+
+.addVehicle .inputBox .input {
+    padding: .5rem;
+}
+
+.addVehicle .button{
+    padding-left: calc(45vw - 1rem);
+    padding-right: calc(45vw - 1.5rem);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-top: 1rem;
+}
