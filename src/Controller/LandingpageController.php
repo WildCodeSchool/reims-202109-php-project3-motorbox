@@ -6,13 +6,13 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class HomeController extends AbstractController
+class LandingpageController extends AbstractController
 {
-    /**
-     * @Route("/home", name="home")
-     */
+    #[Route('/', name: 'landingpage')]
     public function index(): Response
     {
-        return $this->render('home/index.html.twig');
+        return $this->render('landingpage/landingpage.html.twig', [
+            'controller_name' => 'LandingpageController',
+        ]);
     }
 }
