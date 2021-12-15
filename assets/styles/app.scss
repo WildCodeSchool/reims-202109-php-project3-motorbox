@@ -50,6 +50,7 @@ button {
     margin-bottom: 2rem;
     text-align: center;
     padding: 2rem;
+    color: black;
 }
 
 .parts {
@@ -69,6 +70,7 @@ button {
     text-align: center;
     padding: 7px;
     font-size: 1rem;
+    color: black;
 }
 
 .parts progress {
@@ -84,6 +86,7 @@ button {
     margin-bottom: 0.5rem;
     padding: 6px;
     text-align: center;
+    color: black;
 }
 
 .namePart input {
@@ -111,8 +114,8 @@ progress.ok::-moz-progress-bar { background: green; }
 progress.ok::-webkit-progress-value { background: green; }
 progress.ok { color: green; }
 
-::-moz-progress-bar{
-    background-color: RED;
+::-moz-progress-bar {
+    background-color:$color-5;
 }
 
 .buttonReplace {
