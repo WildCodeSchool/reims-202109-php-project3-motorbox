@@ -47,12 +47,6 @@ class Vehicle
      */
     private string|null $idMotorbox;
 
-    /**
-     * @ORM\ManyToOne(targetEntity=User::class, inversedBy="vehicles")
-     * @ORM\JoinColumn(nullable=false)
-     */
-    private User $user;
-
     public function getId(): int
     {
         return $this->id;
@@ -126,18 +120,6 @@ class Vehicle
     public function setIdMotorbox(?string $idMotorbox): self
     {
         $this->idMotorbox = $idMotorbox;
-
-        return $this;
-    }
-
-    public function getUser(): User
-    {
-        return $this->user;
-    }
-
-    public function setUser(User $user): self
-    {
-        $this->user = $user;
 
         return $this;
     }
