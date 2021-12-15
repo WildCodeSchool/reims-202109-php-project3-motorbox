@@ -10,9 +10,9 @@ class VehicleFixtures extends Fixture
 {
     public const VEHICLES = [
         [
-            'name' => 'Kitt',
+            'name' => 'Baptiste',
             'brand' => 'moto',
-            'model' => 'moto',
+            'model' => 'Suzuki',
             'productYear' => 1920,
             'usedHour' => '10',
         ]
