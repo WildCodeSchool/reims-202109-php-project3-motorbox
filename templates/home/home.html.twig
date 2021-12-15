@@ -1,15 +1,28 @@
 {% extends 'base.html.twig' %}
 
+{% block title %}login
+{% endblock %}
+
+{% block stylesheets %}
+	{{ parent() }}
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+{% endblock %}
+
 {% block body %}
-    <section class="home">
-        {# {% for vehicle in Vehicles %}
-            <p class="box">{{vehicle.name}}<br>{{vehicle.model}}</p>
-        {% endfor %} #}
-        <a class="aBox" href="/addVehicle"> Ajouter </a>
-    </section>
-    <section name="navbar">
-        <a class="aBox">Home</a>
-            <img src="">
-        <a class="aBox">Menu</a>
-    </section>
+	<div class="landing-page">
+		<div class="logo-container">
+			<img class="logo" src="{{ asset('build/images/Motorboxcf.png') }}">
+		</div>
+
+		<section class="landing-button-container">
+				<a class="landing-button" href="{{ path('vehicle_index') }}">
+					S'inscrire
+				</a>
+				<a class="landing-button" href="{{ path('vehicle_index') }}">
+					Se connecter
+				</a>
+		</section>
+	</div>
 {% endblock %}
