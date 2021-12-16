@@ -18,9 +18,9 @@ class PartController extends AbstractController
     #[Route('/', name: 'part_index', methods: ['GET'])]
     public function index(PartRepository $partRepository, VehicleRepository $vehicleRepository): Response
     {
-        return $this->render('part/index.html.twig', [
+        return $this->render('vehicle/partShow.html.twig', [
             'parts' => $partRepository->findAll(),
-            'vehicles' => $vehicleRepository->findAll(),
+            'vehicle' => $vehicleRepository->findAll(),
         ]);
     }
 
