@@ -20,7 +20,7 @@ class PartController extends AbstractController
     {
         return $this->render('vehicle/partShow.html.twig', [
             'parts' => $partRepository->findAll(),
-            'vehicles' => $vehicleRepository->findAll(),
+            'vehicle' => $vehicleRepository->findAll(),
         ]);
     }
 
