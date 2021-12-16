@@ -48,7 +48,7 @@ class Vehicle
     private string|null $idMotorbox;
 
     /**
-     * @ORM\ManyToOne(targetEntity=User::class, inversedBy="vehicle")
+     * @ORM\ManyToOne(targetEntity=User::class, inversedBy="vehicles")
      * @ORM\JoinColumn(nullable=false)
      */
     private User $user;
