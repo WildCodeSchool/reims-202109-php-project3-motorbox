@@ -5,14 +5,14 @@
 {% block body %}
     <h2></h2>
     <section class="nameMotor">
-        <p class="box"> {{ vehicles.0.name }} <br> {{ vehicles.0.brand }} <br> {{ vehicles.0.model }} </p>
+        <p class="box"> {{ vehicle.id.name }} <br> {{ vehicle.id.brand }} <br> {{ vehicle.id.model }} </p>
     </section>
     <div class="flex parts">
-        <h2>Temps d'utilisation total : {{ vehicles.0.usedHour }}H</h2>
+        <h2>Temps d'utilisation total : {{ vehicle.0.usedHour }}H</h2>
         {% for part in parts %}
         <div class="namePart">
             <label for="{{ part.id }}">{{ part.name }}</label>
-            <progress value = "{{ vehicles.0.usedHour }}" max = "{{ part.lifespan }}"> </progress>
+            <progress value = "{{ vehicle.id.usedHour }}" max = "{{ part.lifespan }}"> </progress>
             <input type="checkbox" name="my-checkbox" id="{{ part.id }}">
         </div>
         {% endfor %}
