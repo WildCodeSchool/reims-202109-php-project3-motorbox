@@ -16,7 +16,7 @@
             <input type="checkbox" name="my-checkbox" id="{{ part.id }}">
         </div>
         {% endfor %}
-        <button class="buttonReplace" type="submit">Remplacer pièce</button>
+        <a class="buttonReplace" href="{{ path('part_edit') }}">Remplacer pièce</a>
         <a class="buttonAddPiece" href="{{ path('part_new') }}">Ajouter pièce</a>
 
     </div>
