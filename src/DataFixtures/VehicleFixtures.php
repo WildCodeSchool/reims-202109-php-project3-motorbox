@@ -15,7 +15,7 @@ class VehicleFixtures extends Fixture implements DependentFixtureInterface
             'brand' => 'moto',
             'model' => 'Suzuki',
             'productYear' => 1920,
-            'usedHour' => '10',
+            'usedHour' => '5',
             'userReference' => 'user_contributor@monsite.com',
         ]
     ];
