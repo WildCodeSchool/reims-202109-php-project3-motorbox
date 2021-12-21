@@ -227,3 +227,16 @@ progress.ok { color: green; }
     padding-bottom: 1rem;
     margin-top: 1rem;
 }
+// ---------------------------------START LOGIN------------------------------------ //
+.login-container > form {
+    text-align: center;
+}
+.login-container > form > div {
+    margin: 1rem;
+    padding: .5rem;
+}
+.login-container > form > button {
+    padding: 1rem 2rem;
+    margin-top: 1rem;
+}
+// ---------------------------------END LOGIN------------------------------------ //
