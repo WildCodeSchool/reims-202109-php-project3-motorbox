@@ -9,9 +9,6 @@
         {% endfor %}
         <a class="aBox" href="{{ path('vehicle_new') }}"> Ajouter </a>
     </section>
-    <section name="navbar">
-        <a class="aBox">Home</a>
-            <img src="">
-        <a class="aBox">Menu</a>
-    </section>
+
+    {% include "_navbar.html.twig" %}
 {% endblock %}
