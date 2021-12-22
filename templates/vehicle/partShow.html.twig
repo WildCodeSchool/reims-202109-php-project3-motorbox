@@ -14,7 +14,7 @@
             <label for="{{ part.id }}">{{ part.name }}</label>
             <input type="checkbox" name="my-checkbox" id="{{ part.id }}">
         </div>
-            <progress value = "{{ vehicle.0.usedHour }}" max = "{{ part.lifespan }}"> </progress>
+        <progress value = "{{ vehicle.0.usedHour }}" max = "{{ part.lifespan }}"></progress>
         {% endfor %}
         <a class="buttonReplace" href="">Remplacer pièce</a>
         <a class="buttonAddPiece" href="">Ajouter pièce</a>
