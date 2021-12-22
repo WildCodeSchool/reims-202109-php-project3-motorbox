@@ -1,76 +1,80 @@
 @import 'variables.scss';
 
-*, *::after, *::before {
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
     margin:0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body {
+    font-family: 'catamaran', sans-serif;
+    font-size: x-large;
+    font-weight: 600;
+    min-height: 100vh;
     background-color: $bg-color;
     color: $color-1;
-    min-height: 100vh;
-  
 }
 
 button {
-    background-color: green;
-    border: none;
+    background-color: $green;
+    border: 0;
 }
 
 .box {
-    opacity: 0.8;
     background-color: $color-3;
-    border: white thin ;
+    opacity: .8;
     text-align: center;
     border-radius: 4px;
+    border: thin $white;
 }
 
 .home {
     padding: 1em;
-    width:max-content;
+    width: max-content;
 }
 
 .home .box {
-    margin-top: 2rem;
     margin-bottom: 2rem;
+    margin-top: 2rem;
     padding: 2rem;
 }
 
-/* ---------------------------------------------------- Page /Parts --------------------------------------------------------------*/
+// ---------------------------------------------------- Page /Parts --------------------------------------------------------------
 
 .nameMotor .box {
-    background-color:$color-3;
-    width: 10rem;
-    opacity: 0.8;
-    border-radius: 4px;
+    background-color: $color-3;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 2rem;
     margin-bottom: 2rem;
-    text-align: center;
+    margin-top: 2rem;
+    border-radius: 4px;
+    width: 10rem;
     padding: 2rem;
-    color: black;
+    text-align: center;
+    color: $black;
+    opacity: .8;
 }
 
 .parts {
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 .parts h2 {
     background-color: $color-3;
-    width: 12rem;
+    color: $black;
     border-radius: 3px;
+    width: 12rem;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 1rem;
-    margin-bottom: 2rem;
     text-align: center;
     padding: 7px;
-    font-size: 1rem;
-    color: black;
 }
 
 .parts progress {
@@ -78,15 +82,15 @@ button {
 }
 
 .namePart label {
-    background-color: #A5A5A5;
+    background-color: #a5a5a5;
     border-radius: 1px;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 1rem;
-    margin-bottom: 0.5rem;
     padding: 6px;
-    text-align: center;
-    color: black;
+    color: $black;
 }
 
 .namePart input {
@@ -98,80 +102,67 @@ button {
 }
 
 progress{
-    margin-top: 1.3rem;
     margin-bottom: 1.2rem;
+    margin-top: 1.3rem;
 }
 
-progress.alert::-moz-progress-bar { background: red; }
-progress.alert::-webkit-progress-value { background: red; }
-progress.alert { color: red; }
-
-progress.warning::-moz-progress-bar { background: orange; }
-progress.warning::-webkit-progress-value { background: orange; }
-progress.warning { color: orange; }
-
-progress.ok::-moz-progress-bar { background: green; }
-progress.ok::-webkit-progress-value { background: green; }
-progress.ok { color: green; }
-
 ::-moz-progress-bar {
-    background-color:$color-5;
+    background-color: $color-5;
 }
 
 .buttonReplace {
+    background-color: $color-2;
     border-radius: 3px;
-    border: none;
+    color: $white;
+    text-align: center;
+    font-size: 1rem;
+    border: 0;
+    margin-top: 2rem;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 2rem;
-    text-align: center;
     padding: 1rem;
-    background-color: $color-2;
-    color: white;
-    padding-right: 6rem;
     padding-left: 6rem;
-    font-size: 1rem;
+    padding-right: 6rem;
 }
 
 .buttonAddPiece {
+    background-color: #235E9C;
     border-radius: 3px;
-    border: none;
+    border: 0;
+    color: $white;
+    font-size: 1rem;
+    margin-top: 1rem;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 1rem;
     text-align: center;
     padding: 1rem;
-    background-color: #235E9C;
-    color: white;
-    padding-right: 6.5rem;
     padding-left: 6.5rem;
-    font-size: 1rem;
+    padding-right: 6.5rem;
 }
 
-/*------------------------------------------ end page part---------------------------------------*/
-// ---------------------------------Landing page------------------------------------ //
+// ------------------------------------------ end page part---------------------------------------
+// ---------------------------------Landing page------------------------------------
 
-.landing-page{
+.landing-page {
     display: flex;
     flex-direction: column;
 }
 
-.landing-page .logo-container{
+.landing-page .logo-container {
     margin-bottom: 2rem;
     text-align: center;
 }
 
-.landing-page .logo{
+.landing-page .logo {
     width: 100%;
 }
 
-
-.landing-button-container{
+.landing-button-container {
     display: flex;
     flex-direction: column;
 }
 
-.landing-button{
+.landing-button {
     background-color: $color-3;
     font-size: 1em;
     border-radius: 2rem;
@@ -182,34 +173,27 @@ progress.ok { color: green; }
     text-decoration: none;
 }
 
-// ---------------------------------End Landing page------------------------------------ //
+// ---------------------------------End Landing page------------------------------------
 .home .aBox {
-    opacity: 0.8;
     background-color: $color-3;
-    border: white thin ;
-    text-align: center;
+    opacity: .8;
     border-radius: 4px;
+    border: thin $white;
+    text-align: center;
     text-decoration: none;
-    color: black;
-    padding-left: 9rem;
-    padding-right: 9rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    color: $black;
+    padding: 1rem 9rem;
 }
 
 .addVehicle {
-    padding: 1em;
     min-height: 100vh;
+    padding: 1em;
 }
 
-.addVehicle .selectBox {
-    padding: 1rem;
+.addVehicle .selectBox,
+.addVehicle .inputBox {
     margin-top: 1rem;
-}
-
-.addVehicle .inputBox{
     padding: 1rem;
-    margin-top: 1rem;
 }
 
 .moto-input {
@@ -220,10 +204,48 @@ progress.ok { color: green; }
     padding: .5rem;
 }
 
-.addVehicle .button{
+.addVehicle .button {
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
     padding-left: calc(45vw - 1rem);
     padding-right: calc(45vw - 1.5rem);
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    margin-top: 1rem;
 }
+
+// ---------------------------------START LOGIN------------------------------------ //
+.login-container > form {
+    text-align: center;
+}
+
+.login-container > form > div {
+    margin: 1rem;
+    padding: .5rem;
+}
+
+.login-container > form > button {
+    margin-top: 1rem;
+    padding: 1rem 2rem;
+}
+
+// ---------------------------------END LOGIN------------------------------------ 
+// ---------------------------------START REGISTER------------------------------------ 
+// ---------------------------------END REGISTER------------------------------------ 
+// ---------------------------------START FORGOT PASSWORD------------------------------------ 
+// ---------------------------------END FORGOT PASSWORD------------------------------------ 
+// ---------------------------------START NAVBAR------------------------------------
+
+.aBox {
+    background-color: $color-3;
+    color: $bg-color;
+    font-size: 1em;
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+}
+
+.navbar {
+    bottom: 3rem;
+    position: fixed;
+}
+
+// ---------------------------------END NAVBAR------------------------------------ //
