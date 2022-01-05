@@ -27,3 +27,7 @@ yarn.lock
 /.phpcs-cache
 /phpcs.xml
 ###< squizlabs/php_codesniffer ###
+
+###> vscode configuration ###
+.vscode
+###< vscode configuration ###
