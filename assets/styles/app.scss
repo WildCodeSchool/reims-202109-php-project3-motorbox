@@ -13,7 +13,7 @@ body {
     font-size: x-large;
     font-weight: 600;
     min-height: 100vh;
-    background-color: $bg-color;
+    background-color: $color-body;
     color: $color-1;
 }
 
@@ -39,6 +39,7 @@ button {
     margin-bottom: 2rem;
     margin-top: 2rem;
     padding: 2rem;
+    box-shadow: rgba(18, 14, 130, 0.88) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 // ---------------------------------------------------- Page /Parts --------------------------------------------------------------
@@ -171,9 +172,15 @@ progress{
     text-align: center;
     color: $bg-color;
     text-decoration: none;
+    box-shadow: rgba(18, 14, 130, 0.88) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 // ---------------------------------End Landing page------------------------------------
+//---------------------------------register--------------------------------
+#register-title {
+    text-align: center;
+}
+//---------------------------------end register----------------------------
 .home .aBox {
     background-color: $color-3;
     opacity: .8;
@@ -183,6 +190,8 @@ progress{
     text-decoration: none;
     color: $black;
     padding: 1rem 9rem;
+    box-shadow: rgba(18, 14, 130, 0.88) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+
 }
 
 .addVehicle {
