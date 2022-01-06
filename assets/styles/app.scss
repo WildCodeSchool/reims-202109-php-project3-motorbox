@@ -178,14 +178,16 @@ progress{
     color: $bg-color;
     box-shadow: rgba(18, 14, 130, 0.88) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
-p.box {
+.p.box {
     color:$black
 }
+
 // ---------------------------------End Landing page------------------------------------
 //---------------------------------register--------------------------------
 #register-title {
     text-align: center;
 }
+
 //---------------------------------end register----------------------------
 .home .aBox {
     background-color: $color-3;
