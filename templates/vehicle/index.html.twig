@@ -5,9 +5,9 @@
 {% block body %}
     <section class="home">
         {% for vehicle in vehicles %}
-            <a href="{{ path('part_index') }}" ><p class="box">{{ vehicle.name }}<br>{{ vehicle.brand }} {{ vehicle.model }}</p></a>
+            <a class="conteneur-link" href="{{ path('part_index') }}" ><p class="box">{{ vehicle.name }}<br>{{ vehicle.brand }} {{ vehicle.model }}</p></a>
         {% endfor %}
-        <a class="aBox" href="{{ path('vehicle_new') }}"> Ajouter </a>
+        <a class="aBox conteneur-link" href="{{ path('vehicle_new') }}"> Ajouter </a>
     </section>
 
     {% include "_navbar.html.twig" %}
