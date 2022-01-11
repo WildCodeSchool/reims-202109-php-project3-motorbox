@@ -39,6 +39,17 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      */
     private $password;
 
+    /**
+     * @ORM\OneToMany(targetEntity=Vehicle::class, mappedBy="user", orphanRemoval=true)
+     * @var Collection<Vehicle>
+     */
+    private Collection $vehicles;
+
+    public function __construct()
+    {
+        $this->vehicles = new ArrayCollection();
+    }
+
     public function getId(): ?int
     {
         return $this->id;
@@ -126,5 +137,30 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     {
         // If you store any temporary, sensitive data on the user, clear it here
         // $this->plainPassword = null;
+    }
+
+    /**
+     * @return Collection|Vehicle[]
+     */
+    public function getVehicles(): Collection
+    {
+        return $this->vehicles;
+    }
+
+    public function addVehicle(Vehicle $vehicle): self
+    {
+        if (!$this->vehicles->contains($vehicle)) {
+            $this->vehicles[] = $vehicle;
+            $vehicle->setUser($this);
+        }
+
+        return $this;
+    }
+
+    public function removeVehicle(Vehicle $vehicle): self
+    {
+        $this->vehicles->removeElement($vehicle);
+
+        return $this;
     }
 }
