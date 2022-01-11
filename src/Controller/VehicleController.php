@@ -19,19 +19,26 @@ class VehicleController extends AbstractController
     #[Route('/', name: 'vehicle_index', methods: ['GET'])]
     public function index(VehicleRepository $vehicleRepository): Response
     {
+        $this->denyAccessUnlessGranted("ROLE_USER");
+        $user = $this->getUser();
+
         return $this->render('vehicle/index.html.twig', [
-            'vehicles' => $vehicleRepository->findAll(),
+            'user' => $user,
         ]);
     }
 
     #[Route('/new', name: 'vehicle_new', methods: ['GET', 'POST'])]
     public function new(Request $request, EntityManagerInterface $entityManager): Response
     {
+        $this->denyAccessUnlessGranted("ROLE_USER");
+        $user = (User)($this->getUser());
+
         $vehicle = new Vehicle();
         $form = $this->createForm(VehicleType::class, $vehicle);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $vehicle->setUser($user);
             $entityManager->persist($vehicle);
             $entityManager->flush();
 
