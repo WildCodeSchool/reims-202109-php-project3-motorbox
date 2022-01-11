@@ -28,9 +28,6 @@ class VehicleFixtures extends Fixture implements DependentFixtureInterface
             $vehicle->setModel($vehicleData['model']);
             $vehicle->setProductYear($vehicleData['productYear']);
             $vehicle->setUsedHour($vehicleData['usedHour']);
-            $vehicle->setUser(
-                $this->getReference($vehicleData['userReference'])
-            );
             $this->addReference('vehicle_' . $key, $vehicle);
 
             $manager->persist($vehicle);

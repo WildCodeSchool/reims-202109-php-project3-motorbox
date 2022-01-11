@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Repository\VehicleRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass=VehicleRepository::class)
@@ -46,12 +47,6 @@ class Vehicle
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private string|null $idMotorbox;
-
-    /**
-     * @ORM\ManyToOne(targetEntity=User::class, inversedBy="vehicles")
-     * @ORM\JoinColumn(nullable=false)
-     */
-    private User $user;
 
     public function getId(): int
     {
@@ -126,18 +121,6 @@ class Vehicle
     public function setIdMotorbox(?string $idMotorbox): self
     {
         $this->idMotorbox = $idMotorbox;
-
-        return $this;
-    }
-
-    public function getUser(): User
-    {
-        return $this->user;
-    }
-
-    public function setUser(User $user): self
-    {
-        $this->user = $user;
 
         return $this;
     }
