@@ -28,7 +28,7 @@ class Part
     private int $lifespan;
 
     /**
-     * @ORM\ManyToOne(targetEntity=Vehicle::class)
+     * @ORM\ManyToOne(targetEntity=Vehicle::class, inversedBy="parts")
      * @ORM\JoinColumn(nullable=false)
      */
     private Vehicle $vehicle;
@@ -62,7 +62,7 @@ class Part
         return $this;
     }
 
-    public function getVehicle(): ?Vehicle
+    public function getVehicle(): Vehicle
     {
         return $this->vehicle;
     }
