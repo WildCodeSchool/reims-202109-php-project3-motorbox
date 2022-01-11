@@ -18,7 +18,7 @@ body {
 }
 
 button {
-    background-color: $green;
+    background-color: $color-blue;
     border: 0;
 }
 
@@ -210,8 +210,7 @@ progress{
     padding: 1em;
 }
 
-.addVehicle .selectBox,
-.addVehicle .inputBox {
+.addVehicle div {
     margin-top: 1rem;
     padding: 1rem;
 }
@@ -220,7 +219,7 @@ progress{
     padding: .4rem;
 }
 
-.addVehicle .inputBox .input {
+.addVehicle input {
     padding: .5rem;
 }
 
@@ -232,9 +231,34 @@ progress{
     padding-right: calc(45vw - 1.5rem);
 }
 //-------------------------------- css new/vehicle----------------------------------
+.containeur-column h1 {
+    text-align: center;
+    font-size: 2rem;
+}
 
+.btn {
+    font-size: 26px;
+    padding: 5px;
+    margin-left: 9rem;
+}
+
+.add-vehicle-form  h1 {
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.add-vehicle-form label {
+    margin-right: 10px;;
+}
+
+.add-vehicle-form a {
+    color: black;
+}
+
+// exemple css label[for="vehicle_brand"]
 //---------------------------------end add vehicle----------------------------------
-
 // ---------------------------------START LOGIN------------------------------------ //
 .login-container > form {
     text-align: center;
@@ -273,8 +297,15 @@ progress{
 
 // ---------------------------------END NAVBAR------------------------------------ //
 
-//------------------------------------conteneurlink------------------------------------------
-.conteneur-link{
+//------------------------------------containerlink------------------------------------------
+.container-link{
     text-decoration: none;
 }
-//-----------------------------------end conteneurlink-------------------------------------
+//-----------------------------------end containerlink-------------------------------------
+//----------------------------------container: flex; column, center------------------------
+.container-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+//----------------------------------en container: flex, column, center

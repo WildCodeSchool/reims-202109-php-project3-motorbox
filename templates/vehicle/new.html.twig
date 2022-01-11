@@ -3,11 +3,11 @@
 {% block title %}New Vehicle{% endblock %}
 
 {% block body %}
-
-    <h1>Create new Vehicle</h1>
-
-    {{ include('vehicle/_form.html.twig') }}
-
-    <a href="{{ path('vehicle_index') }}">back to list</a>
+        <div class="container-column add-vehicle-form">
+            <h1>Create new Vehicle</h1>
+            {{ include('vehicle/_form.html.twig') }}
+            <a class="container-link" href="{{ path('vehicle_index') }}">back to list</a>
+        </div>
     {% include "_navbar.html.twig" %}
+
 {% endblock %}
