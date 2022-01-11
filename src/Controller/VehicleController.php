@@ -81,7 +81,7 @@ class VehicleController extends AbstractController
         return $this->redirectToRoute('vehicle_index', [], Response::HTTP_SEE_OTHER);
     }
 
-    #[Route('/{id}/parts', name: 'vehicle_parts', methods: ['GET'])]
+    #[Route('/{vehicle}/parts', name: 'vehicle_parts', methods: ['GET'])]
     public function parts(Vehicle $vehicle): Response
     {
         return $this->render('vehicle/parts.html.twig', [
@@ -89,7 +89,7 @@ class VehicleController extends AbstractController
         ]);
     }
 
-    #[Route('/{id}/parts/new', name: 'vehicle_parts_new', methods: ['GET', 'POST'])]
+    #[Route('/{vehicle}/parts/new', name: 'vehicle_parts_new', methods: ['GET', 'POST'])]
     public function partsNew(Request $request, Vehicle $vehicle, EntityManagerInterface $entityManager): Response
     {
         $part = new Part();
@@ -113,7 +113,7 @@ class VehicleController extends AbstractController
         ]);
     }
 
-    #[Route('/{id}/parts/{partId}', name: 'vehicle_parts_show', methods: ['GET'])]
+    #[Route('/{vehicle}/parts/{part}', name: 'vehicle_parts_show', methods: ['GET'])]
     public function partsShow(Vehicle $vehicle, Part $part): Response
     {
         return $this->render('vehicle/parts_show.html.twig', [
@@ -122,7 +122,7 @@ class VehicleController extends AbstractController
         ]);
     }
 
-    #[Route('/{id}/parts/{partId}/edit', name: 'vehicle_parts_edit', methods: ['GET', 'POST'])]
+    #[Route('/{vehicle}/parts/{part}/edit', name: 'vehicle_parts_edit', methods: ['GET', 'POST'])]
     public function partsEdit(
         Request $request,
         Vehicle $vehicle,
@@ -147,7 +147,7 @@ class VehicleController extends AbstractController
         ]);
     }
 
-    #[Route('/{id}/parts/{partId}', name: 'vehicle_parts_delete', methods: ['POST'])]
+    #[Route('/{vehicle}/parts/{part}', name: 'vehicle_parts_delete', methods: ['POST'])]
     public function partsDelete(
         Request $request,
         Vehicle $vehicle,
