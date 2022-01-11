@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\VehicleRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -52,6 +54,17 @@ class Vehicle
      * @ORM\JoinColumn(nullable=false)
      */
     private User $user;
+
+    /**
+     * @ORM\OneToMany(targetEntity=Part::class, mappedBy="vehicle", orphanRemoval=true)
+     * @var Collection<Part>
+     */
+    private Collection $parts;
+
+    public function __construct()
+    {
+        $this->parts = new ArrayCollection();
+    }
 
     public function getId(): int
     {
@@ -138,6 +151,31 @@ class Vehicle
     public function setUser(User $user): self
     {
         $this->user = $user;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Part[]
+     */
+    public function getParts(): Collection
+    {
+        return $this->parts;
+    }
+
+    public function addPart(Part $part): self
+    {
+        if (!$this->parts->contains($part)) {
+            $this->parts[] = $part;
+            $part->setVehicle($this);
+        }
+
+        return $this;
+    }
+
+    public function removePart(Part $part): self
+    {
+        $this->parts->removeElement($part);
 
         return $this;
     }
