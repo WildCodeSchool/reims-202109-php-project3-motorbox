@@ -109,7 +109,7 @@ class VehicleController extends AbstractController
             $entityManager->flush();
 
             return $this->redirectToRoute('vehicle_parts', [
-                'id' => $vehicle->getId(),
+                'vehicle' => $vehicle->getId(),
             ], Response::HTTP_SEE_OTHER);
         }
 
@@ -143,7 +143,7 @@ class VehicleController extends AbstractController
             $entityManager->flush();
 
             return $this->redirectToRoute('vehicle_parts', [
-                'id' => $vehicle->getId(),
+                'vehicle' => $vehicle->getId(),
             ], Response::HTTP_SEE_OTHER);
         }
 
@@ -167,7 +167,7 @@ class VehicleController extends AbstractController
         }
 
         return $this->redirectToRoute('vehicle_parts', [
-            'id' => $vehicle->getId(),
+            'vehicle' => $vehicle->getId(),
         ], Response::HTTP_SEE_OTHER);
     }
 }
