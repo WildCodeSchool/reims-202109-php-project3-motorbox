@@ -1,5 +1,6 @@
 @import 'variables.scss';
 
+// START BASE
 *,
 *::after,
 *::before {
@@ -17,15 +18,142 @@ body {
     color: $color-1;
 }
 
+.text-align-center {
+    text-align: center;
+}
+
 .flex {
     display: flex;
     justify-content: center;
 }
-
+// Used for link and button
 .button {
-    
+    text-decoration: none;
+    text-align: center;
+    font-size: 1em;
+    margin: 2rem;
+    padding: 2rem;
+    border-radius: 2rem;
+    background-color: $color-3;
+    color: $bg-color;
+    box-shadow: rgba(18, 14, 130, 0.88) 0px 2px 4px,
+                rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+                rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
+// END BASE
+// START NAVBAR
+.aBox {
+    background-color: $color-3;
+    color: $bg-color;
+    font-size: 1em;
+    padding: 1rem;
+    text-align: center;
+}
+
+.navbar {
+    bottom: 3rem;
+    position: fixed;
+    display: flex;
+}
+
+// END NAVBAR
+// START HOME
+.landing-page {
+    display: flex;
+    flex-direction: column;
+}
+
+.landing-page .logo-container {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.landing-page .logo {
+    width: 100%;
+}
+
+.landing-button-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.landing-button {
+    background-color: $color-3;
+    font-size: 1em;
+    border-radius: 2rem;
+    padding: 2rem;
+    margin: 2rem;
+    text-align: center;
+    color: $bg-color;
+    box-shadow: rgba(18, 14, 130, 0.88) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.p.box {
+    color:$black
+}
+
+// END HOME
+// START LOGIN
+.login-container > form {
+    text-align: center;
+}
+
+.login-container > form > div {
+    margin: 1rem;
+    padding: .5rem;
+}
+
+.login-container > form > button {
+    margin-top: 1rem;
+    padding: 1rem 2rem;
+}
+
+// END LOGIN
+// START REGISTER
+#register-title {
+    text-align: center;
+}
+
+// END REGISTER
+// START INDEX VEHICLE
+// END INDEX VEHICLE
+// START SHOW VEHICLE
+// END SHOW VEHICLE
+// START FORM VEHICLE
+// END FORM VEHICLE
+// START NEW VEHICLE
+.containeur-column h1 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.btn {
+    font-size: 26px;
+    padding: 5px;
+    margin-left: 9rem;
+}
+
+.add-vehicle-form  h1 {
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.add-vehicle-form label {
+    margin-right: 10px;;
+}
+
+.add-vehicle-form a {
+    color: black;
+}
+
+// END NEW VEHICLE
+// START EDIT VEHICLE
+// END EDIT VEHICLE
+// START PARTS VEHICLE
+// END PARTS VEHICLE
 button {
     background-color: $color-blue;
     border: 0;
@@ -159,49 +287,6 @@ progress{
 }
 
 // ------------------------------------------ end page part---------------------------------------
-// ---------------------------------Landing page------------------------------------
-
-.landing-page {
-    display: flex;
-    flex-direction: column;
-}
-
-.landing-page .logo-container {
-    margin-bottom: 2rem;
-    text-align: center;
-}
-
-.landing-page .logo {
-    width: 100%;
-}
-
-.landing-button-container {
-    display: flex;
-    flex-direction: column;
-}
-
-.landing-button {
-    background-color: $color-3;
-    font-size: 1em;
-    border-radius: 2rem;
-    padding: 2rem;
-    margin: 2rem;
-    text-align: center;
-    color: $bg-color;
-    box-shadow: rgba(18, 14, 130, 0.88) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-}
-
-.p.box {
-    color:$black
-}
-
-// ---------------------------------End Landing page------------------------------------
-//---------------------------------register--------------------------------
-#register-title {
-    text-align: center;
-}
-
-//---------------------------------end register----------------------------
 .home .aBox {
     background-color: $color-3;
     opacity: .8;
@@ -239,73 +324,6 @@ progress{
     padding-left: calc(45vw - 1rem);
     padding-right: calc(45vw - 1.5rem);
 }
-
-//-------------------------------- css new/vehicle----------------------------------
-.containeur-column h1 {
-    text-align: center;
-    font-size: 2rem;
-}
-
-.btn {
-    font-size: 26px;
-    padding: 5px;
-    margin-left: 9rem;
-}
-
-.add-vehicle-form  h1 {
-    margin-bottom: 2rem;
-    margin-top: 1rem;
-    text-align: center;
-    font-size: 2rem;
-}
-
-.add-vehicle-form label {
-    margin-right: 10px;;
-}
-
-.add-vehicle-form a {
-    color: black;
-}
-
-// exemple css label[for="vehicle_brand"]
-//---------------------------------end add vehicle----------------------------------
-// ---------------------------------START LOGIN------------------------------------ //
-.login-container > form {
-    text-align: center;
-}
-
-.login-container > form > div {
-    margin: 1rem;
-    padding: .5rem;
-}
-
-.login-container > form > button {
-    margin-top: 1rem;
-    padding: 1rem 2rem;
-}
-
-// ---------------------------------END LOGIN------------------------------------ 
-// ---------------------------------START REGISTER------------------------------------ 
-// ---------------------------------END REGISTER------------------------------------ 
-// ---------------------------------START FORGOT PASSWORD------------------------------------ 
-// ---------------------------------END FORGOT PASSWORD------------------------------------ 
-// ---------------------------------START NAVBAR------------------------------------
-
-.aBox {
-    background-color: $color-3;
-    color: $bg-color;
-    font-size: 1em;
-    padding: 1rem;
-    text-align: center;
-}
-
-.navbar {
-    bottom: 3rem;
-    position: fixed;
-    display: flex;
-}
-
-// ---------------------------------END NAVBAR------------------------------------ //
 
 //------------------------------------containerlink------------------------------------------
 
