@@ -3,22 +3,21 @@
 {% block title %}Register{% endblock %}
 
 {% block body %}
-<div class="landing-page">
+<div class="flex text-align-center landing-page">
     <div class="logo-container">
         <img class="logo" src="{{ asset('build/images/Motorboxcf.png') }}">
     </div>
-    <div id="register-title">
-        <h1>Register</h1>
-    </div>
-		    <div class="login-container">
-                {{ form_start(registrationForm) }}
-                {{ form_row(registrationForm.email) }}
-                {{ form_row(registrationForm.plainPassword, {
-                    label: 'Password'
-                }) }}
-                {{ form_row(registrationForm.agreeTerms) }}
+    <h1>Register</h1>
+    <div>
+        {{ form_start(registrationForm) }}
+        {{ form_row(registrationForm.email) }}
+        {{ form_row(registrationForm.plainPassword, {
+            label: 'Password'
+        }) }}
+        {{ form_row(registrationForm.agreeTerms) }}
 
-                    <button type="submit" class="btn">Register</button>
-                {{ form_end(registrationForm) }}
-            </div>
+        <button type="submit" class="button">Register</button>
+        {{ form_end(registrationForm) }}
+    </div>
+</div>
 {% endblock %}
