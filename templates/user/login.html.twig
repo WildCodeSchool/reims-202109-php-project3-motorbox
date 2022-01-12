@@ -1,8 +1,8 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <div class="landing-page">
-        <div class="logo-container">
+    <div class="flex landing-page">
+        <div class="text-align-center logo-container">
             <img class="logo" src="{{ asset('build/images/Motorboxcf.png') }}">
         </div>
 
@@ -23,7 +23,7 @@
                 {# If you want to control the URL the user is redirected to on success #}
                 <input type="hidden" name="_target_path" value="{{ path('vehicle_index') }}"/>
 
-                <button type="submit">login</button>
+                <button class="button" type="submit">login</button>
            </form>
         </div>
 	</div>
