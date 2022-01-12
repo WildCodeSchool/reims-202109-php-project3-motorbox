@@ -6,6 +6,7 @@
 
     <section class="nameMotor">
         <p class="box"> {{ vehicle.name }} <br> {{ vehicle.brand }} <br> {{ vehicle.model }} </p>
+        <a href ="{{ path('vehicle_edit', {id: vehicle.id}) }}">Modifier véhicule</a>
     </section>
     <div class="flex parts">
         <h2>Temps d'utilisation total : {{ vehicle.usedHour }}H</h2>
