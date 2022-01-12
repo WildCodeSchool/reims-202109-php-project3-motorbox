@@ -5,13 +5,18 @@
 {% block body %}
 
     <section class="nameMotor">
-        <p class="box"> {{ vehicle.name }} <br>
-            {{ vehicle.brand }} <br>
-            {{ vehicle.model }} <br>
-            <a href ="{{ path('vehicle_edit', {id: vehicle.id}) }}">
-                <img class="fa-edit" src="{{ asset('build/images/edit-solid.svg') }}"></img>
-            </a>
-        </p>
+        <div class="box">
+            <h1> {{ vehicle.name }} <br>
+                {{ vehicle.brand }} <br>
+                {{ vehicle.model }} <br>
+            </h1>
+                <div class= "box-button">
+                    {{ include('vehicle/_delete_form.html.twig') }}
+                    <a href ="{{ path('vehicle_edit', {id: vehicle.id}) }}">
+                        <img class="fa-edit" src="{{ asset('build/images/edit-solid.svg') }}"></img>
+                    </a>
+                </div>
+        </div>
     </section>
     <div class="flex parts">
         <h2>Temps d'utilisation total : {{ vehicle.usedHour }}H</h2>
