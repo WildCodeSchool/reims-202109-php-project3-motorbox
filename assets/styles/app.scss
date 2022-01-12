@@ -60,7 +60,8 @@ body {
 
 // END NAVBAR
 // START HOME
-.landing-page {
+.landing-page,
+.landing-button-container {
     flex-direction: column;
 }
 
@@ -70,10 +71,6 @@ body {
 
 .landing-page .logo {
     width: 100%;
-}
-
-.landing-button-container {
-    flex-direction: column;
 }
 
 // END HOME
