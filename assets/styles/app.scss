@@ -26,6 +26,7 @@ body {
     display: flex;
     justify-content: center;
 }
+
 // Used for link and button
 .button {
     text-decoration: none;
@@ -76,21 +77,6 @@ body {
 .landing-button-container {
     display: flex;
     flex-direction: column;
-}
-
-.landing-button {
-    background-color: $color-3;
-    font-size: 1em;
-    border-radius: 2rem;
-    padding: 2rem;
-    margin: 2rem;
-    text-align: center;
-    color: $bg-color;
-    box-shadow: rgba(18, 14, 130, 0.88) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-}
-
-.p.box {
-    color:$black
 }
 
 // END HOME
@@ -339,3 +325,7 @@ progress{
     align-items: center;
 }
 //----------------------------------en container: flex, column, center
+
+.p.box {
+    color:$black
+}
