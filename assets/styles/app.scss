@@ -43,10 +43,22 @@ button {
 }
 
 // ---------------------------------------------------- Page /Parts --------------------------------------------------------------
-.fa-edit{
-    width: 2rem;
+.box-button {
+    display: flex;
+    justify-content: space-evenly;
 }
 
+.fa-edit {
+    width: 2.5rem;
+}
+
+.fa-trash {
+    background-color:transparent;
+}
+
+.fa-trash img {
+    width: 2rem;
+}
 .nameMotor .box {
     background-color: $color-3;
     margin-left: auto;
