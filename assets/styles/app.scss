@@ -17,6 +17,15 @@ body {
     color: $color-1;
 }
 
+.flex {
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    
+}
+
 button {
     background-color: $color-blue;
     border: 0;
