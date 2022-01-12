@@ -5,8 +5,13 @@
 {% block body %}
 
     <section class="nameMotor">
-        <p class="box"> {{ vehicle.name }} <br> {{ vehicle.brand }} <br> {{ vehicle.model }} </p>
-        <a href ="{{ path('vehicle_edit', {id: vehicle.id}) }}">Modifier véhicule</a>
+        <p class="box"> {{ vehicle.name }} <br>
+            {{ vehicle.brand }} <br>
+            {{ vehicle.model }} <br>
+            <a href ="{{ path('vehicle_edit', {id: vehicle.id}) }}">
+                <img class="fa-edit" src="{{ asset('build/images/edit-solid.svg') }}"></img>
+            </a>
+        </p>
     </section>
     <div class="flex parts">
         <h2>Temps d'utilisation total : {{ vehicle.usedHour }}H</h2>
