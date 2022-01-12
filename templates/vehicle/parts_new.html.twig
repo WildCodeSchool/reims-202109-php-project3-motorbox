@@ -7,9 +7,5 @@
 
     {{ include('part/_form.html.twig') }}
 
-     <pre>
-         {{ dump(vehicle.id) }}
-     </pre>
-
     <a href="{{ path('vehicle_parts', {vehicle: vehicle.id}) }}">back to list</a>
 {% endblock %}
