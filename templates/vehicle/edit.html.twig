@@ -1,9 +1,9 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Edit Vehicle{% endblock %}
+{% block title %}Modifier {{ vehicle.name }}{% endblock %}
 
 {% block body %}
-    <h1>Edit Vehicle</h1>
+    <h1>Modifier {{ vehicle.name }}</h1>
 
     {{ include('vehicle/_form.html.twig', {'button_label': 'Modifier'}) }}
 
