@@ -3,10 +3,10 @@
 {% block title %}New Vehicle{% endblock %}
 
 {% block body %}
-        <div class="container-column add-vehicle-form">
-            <h1>Create new Vehicle</h1>
+        <div class="flex text-align-center container-column">
+            <h1 class="title">Create new Vehicle</h1>
             {{ include('vehicle/_form.html.twig') }}
-            <a class="container-link" href="{{ path('vehicle_index') }}">back to list</a>
+            <a class="button" href="{{ path('vehicle_index') }}">Retour à la liste</a>
         </div>
     {% include "_navbar.html.twig" %}
 

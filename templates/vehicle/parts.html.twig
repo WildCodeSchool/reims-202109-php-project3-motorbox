@@ -4,36 +4,33 @@
 
 {% block body %}
 
-    <section class="nameMotor">
-        <div class="box">
+    <section class="flex container-column text-align-center">
+        <div class="container-vehicle">
             <h1> {{ vehicle.name }} <br>
                 {{ vehicle.brand }} <br>
                 {{ vehicle.model }} <br>
             </h1>
-                <div class= "box-button">
-                    {{ include('vehicle/_delete_form.html.twig') }}
-                    <a href ="{{ path('vehicle_edit', {id: vehicle.id}) }}">
-                        <img class="fa-edit" src="{{ asset('build/images/edit-solid.svg') }}"></img>
-                    </a>
-                </div>
+            <div class= "container-fa-button">
+                {{ include('vehicle/_delete_form.html.twig') }}
+                <a href ="{{ path('vehicle_edit', {id: vehicle.id}) }}">
+                    <img class="fa-edit" src="{{ asset('build/images/edit-solid.svg') }}"></img>
+                </a>
+            </div>
+        </div>
+
+        <div class="container-parts">
+            <h2 class="sub-title">Temps d'utilisation total : {{ vehicle.usedHour }}H</h2>
+            {% for part in vehicle.parts %}
+            <div>
+                <label for="{{ part.id }}">{{ part.name }}</label>
+                <a class="part-button" href="{{ path('vehicle_parts_edit', {vehicle: vehicle.id, part: part.id}) }}">Editer</a>
+                <a class="part-button" href="{{ path('vehicle_parts_delete', {vehicle: vehicle.id, part: part.id}) }}"><img class="fa-trash-part" src="{{ asset('build/images/trash.svg') }}"></img></a>
+                <progress class="progress-part" value = "{{ vehicle.usedHour }}" max = "{{ part.lifespan }}"> </progress>
+                <input class="part-input" type="checkbox" name="my-checkbox" id="{{ part.id }}">
+            </div>
+            {% endfor %}
+                <a class="button" href="{{ path('vehicle_parts_new', {vehicle: vehicle.id}) }}">Ajouter pièce</a>
         </div>
     </section>
-    <div class="flex parts">
-        <h2>Temps d'utilisation total : {{ vehicle.usedHour }}H</h2>
-        {% for part in vehicle.parts %}
-        <div class="namePart">
-            <label for="{{ part.id }}">{{ part.name }}</label>
-                <a href="{{ path('vehicle_parts_edit', {vehicle: vehicle.id, part: part.id}) }}">
-                    <img class="fa-edit-part" src="{{ asset('build/images/edit-solid.svg') }}"></img>
-                </a>
-                <a href="{{ path('vehicle_parts_delete', {vehicle: vehicle.id, part: part.id}) }}">
-                    <img class="fa-trash-part" src="{{ asset('build/images/trash.svg') }}"></img>
-                </a>
-            <progress value = "{{ vehicle.usedHour }}" max = "{{ part.lifespan }}"> </progress>
-            <input type="checkbox" name="my-checkbox" id="{{ part.id }}">
-        </div>
-        {% endfor %}
-        <a class="buttonAddPiece" href="{{ path('vehicle_parts_new', {vehicle: vehicle.id}) }}">Ajouter pièce</a>
-    </div>
 
 {% endblock %}

@@ -11,16 +11,15 @@
 {% endblock %}
 
 {% block body %}
-	<div class="landing-page">
-		<div class="logo-container">
-			<img class="logo" src="{{ asset('build/images/Motorboxcf.png') }}">
-		</div>
+	<div class="flex container-column">
 
-		<section class="landing-button-container">
-			<a class="landing-button conteneur-link" href="{{ path('app_register') }}">
+		{% include "_logo.html.twig" %}
+
+		<section class="flex container-column">
+			<a class="button" href="{{ path('app_register') }}">
 				S'inscrire
 			</a>
-			<a class="landing-button conteneur-link" href="{{ path('login') }}">
+			<a class="button" href="{{ path('login') }}">
 				Se connecter
 			</a>
 		</section>
