@@ -136,18 +136,6 @@ body {
     border: thin $white;
 }
 
-.home {
-    padding: 1em;
-    width: max-content;
-}
-
-.home .box {
-    margin-bottom: 2rem;
-    margin-top: 2rem;
-    padding: 2rem;
-    box-shadow: rgba(18, 14, 130, 0.88) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-}
-
 // ---------------------------------------------------- Page /Parts --------------------------------------------------------------
 .box-button {
     display: flex;
@@ -307,13 +295,6 @@ progress{
     padding-right: calc(45vw - 1.5rem);
 }
 
-//------------------------------------containerlink------------------------------------------
-
-.container-link{
-    text-decoration: none;
-}
-
-//-----------------------------------end containerlink-------------------------------------
 //----------------------------------container: flex; column, center------------------------
 .container-column {
     display: flex;
