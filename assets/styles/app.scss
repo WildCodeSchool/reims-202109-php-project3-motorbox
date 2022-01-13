@@ -43,6 +43,16 @@ body {
                 rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
+.title {
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+}
+
+label {
+    margin-right: 10px;;
+}
+
 // END BASE
 // START NAVBAR
 .aBox {
@@ -105,21 +115,6 @@ body {
     font-size: 26px;
     padding: 5px;
     margin-left: 9rem;
-}
-
-.add-vehicle-form  h1 {
-    margin-bottom: 2rem;
-    margin-top: 1rem;
-    text-align: center;
-    font-size: 2rem;
-}
-
-.add-vehicle-form label {
-    margin-right: 10px;;
-}
-
-.add-vehicle-form a {
-    color: black;
 }
 
 // END NEW VEHICLE
@@ -299,9 +294,7 @@ progress{
 
 //----------------------------------container: flex; column, center------------------------
 .container-column {
-    display: flex;
     flex-direction: column;
-    align-items: center;
 }
 //----------------------------------en container: flex, column, center
 
