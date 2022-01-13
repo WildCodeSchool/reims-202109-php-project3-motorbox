@@ -7,12 +7,12 @@
     <section>
         <div class="container-vehicle flex">
             <div>
-                <h1> 
+                <h1>
                     {{ vehicle.model }}<br>
                 </h1>
-                <h2> 
-                    {{ vehicle.brand }} 
-                    {{ vehicle.name }} 
+                <h2>
+                    {{ vehicle.brand }}
+                    {{ vehicle.name }}
                 </h2>
             </div>
             <div class= "container-fa-button">
@@ -24,7 +24,6 @@
         </div>
 
         <h2 class="sub-title">Temps d'utilisation total : {{ vehicle.usedHour }}H</h2>
-        
         <div class="container-parts">
             {% for part in vehicle.parts %}
             <div>
@@ -32,7 +31,7 @@
                     <label for="{{ part.id }}">{{ part.name }}</label>
                         <div>
                             <a class="part-button" href="{{ path('vehicle_parts_edit', {vehicle: vehicle.id, part: part.id}) }}"><img class="fa-edit" src="{{ asset('build/images/edit-solid.svg') }}"></img></a>
-                            <a class="part-button" href="{{ path('vehicle_parts_delete', {vehicle: vehicle.id, part: part.id}) }}"><img class="fa-trash-part" src="{{ asset('build/images/trash.svg') }}"></img></a>
+                            {{ include('vehicle/_delete_parts_form.html.twig') }}
                         </div>
                 </div>
                 <progress class="progress-part" value = "{{ vehicle.usedHour }}" max = "{{ part.lifespan }}"> </progress>
