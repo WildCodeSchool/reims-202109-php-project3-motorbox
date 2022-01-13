@@ -30,8 +30,10 @@ class VehicleController extends AbstractController
     #[Route('/new', name: 'vehicle_new', methods: ['GET', 'POST'])]
     public function new(Request $request, EntityManagerInterface $entityManager): Response
     {
-        $this->denyAccessUnlessGranted("ROLE_USER");
-        $user = (User)($this->getUser());
+        $this->denyAccessUnlessGranted('IS_AUTHENTICATED_FULLY');
+
+        /** @var \App\Entity\User $user */
+        $user = $this->getUser();
 
         $vehicle = new Vehicle();
         $form = $this->createForm(VehicleType::class, $vehicle);
