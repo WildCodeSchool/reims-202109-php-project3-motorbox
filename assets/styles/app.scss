@@ -127,6 +127,20 @@ body {
 // END EDIT VEHICLE
 // START PARTS VEHICLE
 // END PARTS VEHICLE
+// START FONT AWESOME ICONS
+.fa-edit {
+    width: 2.5rem;
+}
+
+.fa-trash {
+    background-color:transparent;
+}
+
+.fa-trash img {
+    width: 2rem;
+}
+
+// END FONT AWESOME ICONS
 
 .box {
     background-color: $color-3;
@@ -140,18 +154,6 @@ body {
 .box-button {
     display: flex;
     justify-content: space-evenly;
-}
-
-.fa-edit {
-    width: 2.5rem;
-}
-
-.fa-trash {
-    background-color:transparent;
-}
-
-.fa-trash img {
-    width: 2rem;
 }
 
 .nameMotor .box {
