@@ -82,6 +82,7 @@ label {
 .logo {
     width: 100%;
 }
+
 // END LOGO
 // START HOME
 // END HOME
@@ -121,6 +122,60 @@ label {
 // START EDIT VEHICLE
 // END EDIT VEHICLE
 // START PARTS VEHICLE
+.container-fa-button {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.container-vehicle {
+    background-color: $color-3;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    border-radius: 4px;
+    width: 17rem;
+    padding: 2rem;
+    color: $black;
+    opacity: .8;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.progress-part {
+    width: 20rem;
+    margin-bottom: 1.2rem;
+    margin-top: 1.3rem;
+}
+
+.part-input {
+    display: none;
+}
+
+::-moz-progress-bar {
+    background-color: $color-5;
+}
+
+.container-parts {
+    margin-left: 2rem;
+}
+
+.sub-title {
+    background-color: $color-3;
+    color: $black;
+    border-radius: 3px;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 7px;
+}
+
+.part-button {
+    margin: 1rem;
+    padding: .5rem;
+}
+
 // END PARTS VEHICLE
 // START FONT AWESOME ICONS
 .fa-edit {
@@ -145,82 +200,6 @@ label {
     border: thin $white;
 }
 
-// ---------------------------------------------------- Page /Parts --------------------------------------------------------------
-.box-button {
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.nameMotor .box {
-    background-color: $color-3;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 2rem;
-    margin-top: 2rem;
-    border-radius: 4px;
-    width: 17rem;
-    padding: 2rem;
-    text-align: center;
-    color: $black;
-    opacity: .8;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-}
-
-.parts {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-left: 2rem;
-}
-
-.parts h2 {
-    background-color: $color-3;
-    color: $black;
-    border-radius: 3px;
-    font-size: 1rem;
-    margin-bottom: 2rem;
-    margin-top: 1rem;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    padding: 7px;
-}
-
-.parts progress {
-    width: 20rem;
-}
-
-.namePart label {
-    background-color: #a5a5a5;
-    border-radius: 1px;
-    text-align: center;
-    margin-bottom: 0.5rem;
-    margin-top: 1rem;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 4px;
-    padding-right: 10px;
-    color: $black;
-}
-
-.namePart input {
-    display: none;
-}
-
-.containerProgress{
-    width:60vh;
-}
-
-progress{
-    margin-bottom: 1.2rem;
-    margin-top: 1.3rem;
-}
-
-::-moz-progress-bar {
-    background-color: $color-5;
-}
-
 .buttonReplace {
     background-color: $color-blue;
     border-radius: 3px;
@@ -234,22 +213,6 @@ progress{
     padding: 1rem;
     padding-left: 6rem;
     padding-right: 6rem;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
-}
-
-.buttonAddPiece {
-    background-color: $color-blue;
-    border-radius: 3px;
-    border: 0;
-    color: $white;
-    font-size: 1rem;
-    margin-top: 1rem;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    padding: 1rem;
-    padding-left: 6.5rem;
-    padding-right: 6.5rem;
     box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
 }
 
