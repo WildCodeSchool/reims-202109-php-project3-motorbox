@@ -27,6 +27,10 @@ body {
     justify-content: center;
 }
 
+.container-column {
+    flex-direction: column;
+}
+
 // Used for link and button
 .button {
     text-decoration: none;
@@ -70,20 +74,16 @@ label {
 }
 
 // END NAVBAR
-// START HOME
-.landing-page,
-.landing-button-container {
-    flex-direction: column;
-}
-
-.landing-page .logo-container {
+// START LOGO
+.logo-container {
     margin-bottom: 2rem;
 }
 
-.landing-page .logo {
+.logo {
     width: 100%;
 }
-
+// END LOGO
+// START HOME
 // END HOME
 // START LOGIN
 .login-row {
@@ -291,12 +291,6 @@ progress{
     padding-left: calc(45vw - 1rem);
     padding-right: calc(45vw - 1.5rem);
 }
-
-//----------------------------------container: flex; column, center------------------------
-.container-column {
-    flex-direction: column;
-}
-//----------------------------------en container: flex, column, center
 
 .p.box {
     color:$black
