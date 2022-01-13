@@ -31,6 +31,11 @@ body {
     flex-direction: column;
 }
 
+.space-between {
+    display: flex;
+    justify-content: space-between;
+}
+
 // Used for link and button
 .button {
     text-decoration: none;
@@ -113,29 +118,27 @@ label {
 // START EDIT VEHICLE
 // END EDIT VEHICLE
 // START PARTS VEHICLE
-.container-fa-button {
-    display: flex;
-    justify-content: space-evenly;
-}
 
 .container-vehicle {
-    background-color: $color-3;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 2rem;
-    margin-top: 2rem;
-    border-radius: 4px;
-    width: 17rem;
-    padding: 2rem;
     color: $black;
-    opacity: .8;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    justify-content: space-around;
+}
+
+.link-fa-edit {
+    margin-bottom: .5rem;
+}
+
+.container-vehicle h2 {
+    font-size: 1.8rem;;
 }
 
 .progress-part {
-    width: 20rem;
+    width: 22rem;
     margin-bottom: 1.2rem;
     margin-top: 1.3rem;
+    border-radius: 20px;
 }
 
 .part-input {
@@ -144,22 +147,26 @@ label {
 
 ::-moz-progress-bar {
     background-color: $color-5;
+    border-radius: 20px;
 }
 
 .container-parts {
-    margin-left: 2rem;
+    margin-left: 1rem;
+    color:$black;
+    margin-bottom: 2rem;
 }
 
 .sub-title {
-    background-color: $color-3;
-    color: $black;
+    background-color: $color-blue;
+    color: $white;
     border-radius: 3px;
     font-size: 1rem;
     margin-bottom: 2rem;
     margin-top: 1rem;
-    margin-left: auto;
+    margin-left: 7rem;
     margin-right: auto;
     padding: 7px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 .part-button {
