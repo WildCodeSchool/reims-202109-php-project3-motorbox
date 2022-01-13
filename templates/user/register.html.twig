@@ -4,9 +4,9 @@
 
 {% block body %}
 <div class="flex text-align-center landing-page">
-    <div class="logo-container">
-        <img class="logo" src="{{ asset('build/images/Motorboxcf.png') }}">
-    </div>
+
+    {% include "_logo.html.twig" %}
+
     <h1>Register</h1>
     <div>
         {{ form_start(registrationForm) }}

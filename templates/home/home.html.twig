@@ -12,9 +12,8 @@
 
 {% block body %}
 	<div class="flex landing-page">
-		<div class="text-align-center logo-container">
-			<img class="logo" src="{{ asset('build/images/Motorboxcf.png') }}">
-		</div>
+
+		{% include "_logo.html.twig" %}
 
 		<section class="flex landing-button-container">
 			<a class="button" href="{{ path('app_register') }}">
