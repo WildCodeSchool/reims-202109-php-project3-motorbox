@@ -59,12 +59,13 @@ label {
 
 // END BASE
 // START NAVBAR
-.aBox {
+.navbar-item {
     background-color: $color-3;
     color: $bg-color;
     font-size: 1em;
     padding: 1rem;
     text-align: center;
+    text-decoration: none;
 }
 
 .navbar {
@@ -107,17 +108,6 @@ label {
 // START FORM VEHICLE
 // END FORM VEHICLE
 // START NEW VEHICLE
-.containeur-column h1 {
-    text-align: center;
-    font-size: 2rem;
-}
-
-.btn {
-    font-size: 26px;
-    padding: 5px;
-    margin-left: 9rem;
-}
-
 // END NEW VEHICLE
 // START EDIT VEHICLE
 // END EDIT VEHICLE
@@ -191,70 +181,3 @@ label {
 }
 
 // END FONT AWESOME ICONS
-
-.box {
-    background-color: $color-3;
-    opacity: .8;
-    text-align: center;
-    border-radius: 4px;
-    border: thin $white;
-}
-
-.buttonReplace {
-    background-color: $color-blue;
-    border-radius: 3px;
-    color: $white;
-    text-align: center;
-    font-size: 1rem;
-    border: 0;
-    margin-top: 2rem;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 1rem;
-    padding-left: 6rem;
-    padding-right: 6rem;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
-}
-
-// ------------------------------------------ end page part---------------------------------------
-.home .aBox {
-    background-color: $color-3;
-    opacity: .8;
-    border-radius: 4px;
-    border: thin $white;
-    text-align: center;
-    color: $black;
-    padding: 1rem 9rem;
-    box-shadow: rgba(18, 14, 130, 0.88) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-
-}
-
-.addVehicle {
-    min-height: 100vh;
-    padding: 1em;
-}
-
-.addVehicle div {
-    margin-top: 1rem;
-    padding: 1rem;
-}
-
-.moto-input {
-    padding: .4rem;
-}
-
-.addVehicle input {
-    padding: .5rem;
-}
-
-.addVehicle .button {
-    margin-top: 1rem;
-    padding-bottom: 1rem;
-    padding-top: 1rem;
-    padding-left: calc(45vw - 1rem);
-    padding-right: calc(45vw - 1.5rem);
-}
-
-.p.box {
-    color:$black
-}
