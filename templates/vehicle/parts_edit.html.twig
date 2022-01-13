@@ -1,13 +1,13 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Edit Part{% endblock %}
+{% block title %}Modifier {{ part.name }}{% endblock %}
 
 {% block body %}
-    <h1>Edit Part</h1>
+    <h1>Modifier {{ part.name }}</h1>
 
-    {{ include('part/_form.html.twig', {'button_label': 'Update'}) }}
+    {{ include('part/_form.html.twig', {'button_label': 'Modifier'}) }}
 
-    <a href="{{ path('vehicle_parts', {vehicle: vehicle.id}) }}">back to list</a>
+    <a href="{{ path('vehicle_parts', {vehicle: vehicle.id}) }}">Retour sur mes pièces</a>
 
     {{ include('vehicle/_delete_parts_form.html.twig') }}
 {% endblock %}
