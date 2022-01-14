@@ -36,6 +36,17 @@ body {
     justify-content: space-between;
 }
 
+.title-form {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.link-style {
+    text-decoration: none;
+    color: #6a6b6c;
+}
+
 // Used for link and button
 .button {
     text-decoration: none;
@@ -175,7 +186,21 @@ label {
 }
 
 // END PARTS VEHICLE
+// START PART FORM VEHICLE
+
+.container-form-part {
+    align-items: center;
+}
+
+.container-form-part input {
+    padding: 0.5rem;
+    font-size: 1rem;;
+    margin-bottom: 1rem;
+}
+
+// END PART FORM VEHICLE
 // START FONT AWESOME ICONS
+
 .fa-edit {
     width: 2.5rem;
 }
