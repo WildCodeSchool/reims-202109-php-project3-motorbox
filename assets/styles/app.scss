@@ -77,7 +77,7 @@ label {
 // END BASE
 // START NAVBAR
 .navbar {
-    position: sticky;
+    position: fixed;
     display: flex;
     background-color: $color-3;
     color: $bg-color;
@@ -85,6 +85,8 @@ label {
     text-align: center;
     text-decoration: none;
     justify-content: space-evenly;
+    bottom: 0;
+    width: 100vw;
 }
 
 .navbar img {
