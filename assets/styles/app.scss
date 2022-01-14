@@ -76,19 +76,23 @@ label {
 
 // END BASE
 // START NAVBAR
-.navbar-item {
+.navbar {
+    position: sticky;
+    display: flex;
     background-color: $color-3;
     color: $bg-color;
     font-size: 1em;
-    padding: 1rem;
     text-align: center;
     text-decoration: none;
+    justify-content: space-evenly;
 }
 
-.navbar {
-    bottom: 3rem;
-    position: fixed;
-    display: flex;
+.navbar img {
+    height: 50px;
+}
+
+.navbar-container{
+    padding-top: 4rem;
 }
 
 // END NAVBAR
