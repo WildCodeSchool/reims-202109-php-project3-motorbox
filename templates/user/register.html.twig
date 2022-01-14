@@ -3,12 +3,12 @@
 {% block title %}Register{% endblock %}
 
 {% block body %}
-<div class="flex text-align-center container-column">
+    <div class="flex text-align-center container-column">
 
-    {% include "_logo.html.twig" %}
+        {% include "_logo.html.twig" %}
 
-    <h1>Inscription</h1>
-    <div>
+        <h1>Inscription</h1>
+
         {{ form_start(registrationForm) }}
         {{ form_row(registrationForm.email, {
         attr: {
@@ -25,5 +25,4 @@
         <button type="submit" class="button">Valider</button>
         {{ form_end(registrationForm) }}
     </div>
-</div>
 {% endblock %}
