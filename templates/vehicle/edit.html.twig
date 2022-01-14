@@ -3,13 +3,14 @@
 {% block title %}Modifier {{ vehicle.name }}{% endblock %}
 
 {% block body %}
-    <h1>Modifier {{ vehicle.name }}</h1>
 
-    {{ include('vehicle/_form.html.twig', {'button_label': 'Modifier'}) }}
+    <div class="text-align-center">
+        <h1 class="title-form">Modifier {{ vehicle.name }}</h1>
 
-    <a href="{{ path('vehicle_index') }}">Retourner à la liste</a>
+        {{ include('vehicle/_form.html.twig', {'button_label': 'Modifier'}) }}
 
-    <div class="">
+        <a href="{{ path('vehicle_index') }}">Retourner à la liste</a>
+
         {{ include('vehicle/_delete_form.html.twig') }}
     </div>
     {% include "_navbar.html.twig" %}
