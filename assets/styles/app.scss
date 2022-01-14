@@ -210,7 +210,7 @@ label {
 }
 
 .fa-trash {
-    background-color:transparent;
+    border: none;
 }
 
 .fa-trash img {
@@ -218,11 +218,17 @@ label {
 }
 
 .fa-trash-part {
-    width: 1.5rem;
+    width: 2rem;
+    margin-left: 1rem;
+    border: none;
 }
 
 .fa-edit-part {
     width: 2rem;
+}
+
+.icons-button {
+    margin-right: 1rem;
 }
 
 // END FONT AWESOME ICONS
