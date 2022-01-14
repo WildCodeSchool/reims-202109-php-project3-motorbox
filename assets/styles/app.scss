@@ -76,19 +76,23 @@ label {
 
 // END BASE
 // START NAVBAR
-.navbar-item {
+.navbar {
+    position: sticky;
+    display: flex;
     background-color: $color-3;
     color: $bg-color;
     font-size: 1em;
-    padding: 1rem;
     text-align: center;
     text-decoration: none;
+    justify-content: space-evenly;
 }
 
-.navbar {
-    bottom: 3rem;
-    position: fixed;
-    display: flex;
+.navbar img {
+    height: 50px;
+}
+
+.navbar-container{
+    padding-top: 4rem;
 }
 
 // END NAVBAR
@@ -214,7 +218,7 @@ label {
 }
 
 .fa-trash {
-    background-color:transparent;
+    border: none;
 }
 
 .fa-trash img {
@@ -222,11 +226,17 @@ label {
 }
 
 .fa-trash-part {
-    width: 1.5rem;
+    width: 2rem;
+    margin-left: 1rem;
+    border: none;
 }
 
 .fa-edit-part {
     width: 2rem;
+}
+
+.icons-button {
+    margin-right: 1rem;
 }
 
 // END FONT AWESOME ICONS
