@@ -1,5 +1,6 @@
 @import 'variables.scss';
 
+// START BASE
 *,
 *::after,
 *::before {
@@ -13,40 +14,192 @@ body {
     font-size: x-large;
     font-weight: 600;
     min-height: 100vh;
-    background-color: $color-body;
+    background: #f5f5f5;
     color: $color-1;
 }
 
-button {
-    background-color: $color-blue;
-    border: 0;
-}
-
-.box {
-    background-color: $color-3;
-    opacity: .8;
+.text-align-center {
     text-align: center;
-    border-radius: 4px;
-    border: thin $white;
 }
 
-.home {
-    padding: 1em;
-    width: max-content;
+.flex {
+    display: flex;
+    justify-content: center;
 }
 
-.home .box {
+.container-column {
+    flex-direction: column;
+}
+
+.space-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.title-form {
+    font-size: 2.5rem;
     margin-bottom: 2rem;
     margin-top: 2rem;
-    padding: 2rem;
-    box-shadow: rgba(18, 14, 130, 0.88) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
-// ---------------------------------------------------- Page /Parts --------------------------------------------------------------
-.box-button {
-    display: flex;
-    justify-content: space-evenly;
+.link-style {
+    text-decoration: none;
+    color: #6a6b6c;
 }
+
+// Used for link and button
+.button {
+    text-decoration: none;
+    text-align: center;
+    font-size: 0.9em;
+    margin: 2rem;
+    padding: 2rem;
+    border-radius: 100px;
+    background-color: $color-blue;
+    opacity: 0.8;
+    color: $color-body;
+    border: 0;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    box-shadow: $color-blue-light 8px 16px 32px
+}
+
+.title {
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+}
+
+label {
+    margin-right: 10px;;
+}
+
+// END BASE
+// START NAVBAR
+.navbar-item {
+    background-color: $color-3;
+    color: $bg-color;
+    font-size: 1em;
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+}
+
+.navbar {
+    bottom: 3rem;
+    position: fixed;
+    display: flex;
+}
+
+// END NAVBAR
+// START LOGO
+.logo-container {
+    margin-bottom: 2rem;
+}
+
+.logo {
+    width: 100%;
+}
+
+// END LOGO
+// START HOME
+// END HOME
+// START LOGIN
+.login-row {
+    margin: 1rem;
+    padding: .5rem;
+}
+
+.login-button {
+    margin-top: 1rem;
+    padding: 1rem 2rem;
+}
+
+// END LOGIN
+// START REGISTER
+// END REGISTER
+// START INDEX VEHICLE
+// END INDEX VEHICLE
+// START SHOW VEHICLE
+// END SHOW VEHICLE
+// START FORM VEHICLE
+// END FORM VEHICLE
+// START NEW VEHICLE
+// END NEW VEHICLE
+// START EDIT VEHICLE
+// END EDIT VEHICLE
+// START PARTS VEHICLE
+
+.container-vehicle {
+    color: $black;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    justify-content: space-around;
+}
+
+.link-fa-edit {
+    margin-bottom: .5rem;
+}
+
+.container-vehicle h2 {
+    font-size: 1.8rem;;
+}
+
+.progress-part {
+    width: 22rem;
+    margin-bottom: 1.2rem;
+    margin-top: 1.3rem;
+    border-radius: 20px;
+}
+
+.part-input {
+    display: none;
+}
+
+::-moz-progress-bar {
+    background-color: $color-5;
+    border-radius: 20px;
+}
+
+.container-parts {
+    margin-left: 1rem;
+    color:$black;
+    margin-bottom: 2rem;
+}
+
+.sub-title {
+    background-color: $color-blue;
+    color: $white;
+    border-radius: 3px;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    margin-left: 7rem;
+    margin-right: auto;
+    padding: 7px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.part-button {
+    margin: 1rem;
+    padding: .5rem;
+}
+
+// END PARTS VEHICLE
+// START PART FORM VEHICLE
+
+.container-form-part {
+    align-items: center;
+}
+
+.container-form-part input {
+    padding: 0.5rem;
+    font-size: 1rem;;
+    margin-bottom: 1rem;
+}
+
+// END PART FORM VEHICLE
+// START FONT AWESOME ICONS
 
 .fa-edit {
     width: 2.5rem;
@@ -60,268 +213,12 @@ button {
     width: 2rem;
 }
 
-.nameMotor .box {
-    background-color: $color-3;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 2rem;
-    margin-top: 2rem;
-    border-radius: 4px;
-    width: 17rem;
-    padding: 2rem;
-    text-align: center;
-    color: $black;
-    opacity: .8;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+.fa-trash-part {
+    width: 1.5rem;
 }
 
-.parts {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-left: 2rem;
+.fa-edit-part {
+    width: 2rem;
 }
 
-.parts h2 {
-    background-color: $color-3;
-    color: $black;
-    border-radius: 3px;
-    font-size: 1rem;
-    margin-bottom: 2rem;
-    margin-top: 1rem;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    padding: 7px;
-}
-
-.parts progress {
-    width: 20rem;
-}
-
-.namePart label {
-    background-color: #a5a5a5;
-    border-radius: 1px;
-    text-align: center;
-    margin-bottom: 0.5rem;
-    margin-top: 1rem;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 4px;
-    padding-right: 10px;
-    color: $black;
-}
-
-.namePart input {
-    display: none;
-}
-
-.containerProgress{
-    width:60vh;
-}
-
-progress{
-    margin-bottom: 1.2rem;
-    margin-top: 1.3rem;
-}
-
-::-moz-progress-bar {
-    background-color: $color-5;
-}
-
-.buttonReplace {
-    background-color: $color-blue;
-    border-radius: 3px;
-    color: $white;
-    text-align: center;
-    font-size: 1rem;
-    border: 0;
-    margin-top: 2rem;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 1rem;
-    padding-left: 6rem;
-    padding-right: 6rem;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
-}
-
-.buttonAddPiece {
-    background-color: $color-blue;
-    border-radius: 3px;
-    border: 0;
-    color: $white;
-    font-size: 1rem;
-    margin-top: 1rem;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    padding: 1rem;
-    padding-left: 6.5rem;
-    padding-right: 6.5rem;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
-}
-
-// ------------------------------------------ end page part---------------------------------------
-// ---------------------------------Landing page------------------------------------
-
-.landing-page {
-    display: flex;
-    flex-direction: column;
-}
-
-.landing-page .logo-container {
-    margin-bottom: 2rem;
-    text-align: center;
-}
-
-.landing-page .logo {
-    width: 100%;
-}
-
-.landing-button-container {
-    display: flex;
-    flex-direction: column;
-}
-
-.landing-button {
-    background-color: $color-3;
-    font-size: 1em;
-    border-radius: 2rem;
-    padding: 2rem;
-    margin: 2rem;
-    text-align: center;
-    color: $bg-color;
-    box-shadow: rgba(18, 14, 130, 0.88) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-}
-
-.p.box {
-    color:$black
-}
-
-// ---------------------------------End Landing page------------------------------------
-//---------------------------------register--------------------------------
-#register-title {
-    text-align: center;
-}
-
-//---------------------------------end register----------------------------
-.home .aBox {
-    background-color: $color-3;
-    opacity: .8;
-    border-radius: 4px;
-    border: thin $white;
-    text-align: center;
-    color: $black;
-    padding: 1rem 9rem;
-    box-shadow: rgba(18, 14, 130, 0.88) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-
-}
-
-.addVehicle {
-    min-height: 100vh;
-    padding: 1em;
-}
-
-.addVehicle div {
-    margin-top: 1rem;
-    padding: 1rem;
-}
-
-.moto-input {
-    padding: .4rem;
-}
-
-.addVehicle input {
-    padding: .5rem;
-}
-
-.addVehicle .button {
-    margin-top: 1rem;
-    padding-bottom: 1rem;
-    padding-top: 1rem;
-    padding-left: calc(45vw - 1rem);
-    padding-right: calc(45vw - 1.5rem);
-}
-
-//-------------------------------- css new/vehicle----------------------------------
-.containeur-column h1 {
-    text-align: center;
-    font-size: 2rem;
-}
-
-.btn {
-    font-size: 26px;
-    padding: 5px;
-    margin-left: 9rem;
-}
-
-.add-vehicle-form  h1 {
-    margin-bottom: 2rem;
-    margin-top: 1rem;
-    text-align: center;
-    font-size: 2rem;
-}
-
-.add-vehicle-form label {
-    margin-right: 10px;;
-}
-
-.add-vehicle-form a {
-    color: black;
-}
-
-// exemple css label[for="vehicle_brand"]
-//---------------------------------end add vehicle----------------------------------
-// ---------------------------------START LOGIN------------------------------------ //
-.login-container > form {
-    text-align: center;
-}
-
-.login-container > form > div {
-    margin: 1rem;
-    padding: .5rem;
-}
-
-.login-container > form > button {
-    margin-top: 1rem;
-    padding: 1rem 2rem;
-}
-
-// ---------------------------------END LOGIN------------------------------------ 
-// ---------------------------------START REGISTER------------------------------------ 
-// ---------------------------------END REGISTER------------------------------------ 
-// ---------------------------------START FORGOT PASSWORD------------------------------------ 
-// ---------------------------------END FORGOT PASSWORD------------------------------------ 
-// ---------------------------------START NAVBAR------------------------------------
-
-.aBox {
-    background-color: $color-3;
-    color: $bg-color;
-    font-size: 1em;
-    padding: 1rem;
-    text-align: center;
-}
-
-.navbar {
-    bottom: 3rem;
-    position: fixed;
-    display: flex;
-}
-
-// ---------------------------------END NAVBAR------------------------------------ //
-
-//------------------------------------containerlink------------------------------------------
-
-.container-link{
-    text-decoration: none;
-}
-
-//-----------------------------------end containerlink-------------------------------------
-//----------------------------------container: flex; column, center------------------------
-.container-column {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-//----------------------------------en container: flex, column, center
+// END FONT AWESOME ICONS
