@@ -29,7 +29,7 @@
             <div>
                 <div class="space-between">
                     <label for="{{ part.id }}">{{ part.name }}</label>
-                        <div class="flex">
+                        <div class="flex icons-button">
                             <a href="{{ path('vehicle_parts_edit', {vehicle: vehicle.id, part: part.id}) }}"><img class="fa-edit" src="{{ asset('build/images/edit-solid.svg') }}"></img></a>
                             {{ include('vehicle/_delete_parts_form.html.twig') }}
                         </div>
