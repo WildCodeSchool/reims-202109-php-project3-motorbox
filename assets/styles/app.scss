@@ -190,16 +190,17 @@ label {
 
 .container-form-part {
     align-items: center;
-    
-    input {
-        padding: 0.5rem;
-        font-size: 1rem;;
-        margin-bottom: 1rem;
-    }
+}
+
+.container-form-part input {
+    padding: 0.5rem;
+    font-size: 1rem;;
+    margin-bottom: 1rem;
 }
 
 // END PART FORM VEHICLE
 // START FONT AWESOME ICONS
+
 .fa-edit {
     width: 2.5rem;
 }
