@@ -1,5 +1,45 @@
-{{ form_start(form) }}
-{{ form_widget(form) }}<br>
+{{ form_start(form, {
+    attr: {
+        class: 'form-vehicle'
+        }
+}) }}
+    {{ form_widget(form.name, {
+        label: 'Nom',
+        attr: {
+            placeholder: 'Nom'
+            }
+    }) }}<br>
+    {{ form_widget(form.brand, {
+        label: 'Marque',
+        attr: {
+            placeholder: 'Marque'
+        }
+    }) }}<br>
+    {{ form_widget(form.model, {
+        label: 'Modele',
+        attr: {
+            placeholder: 'Modèle'
+            }
+    }) }}<br>
+    {{ form_widget(form.productYear, {
+        label: 'Année',
+        attr: {
+            placeholder: 'Année'
+            }
+    }) }}<br>
+    {{ form_widget(form.usedHour, {
+        label: 'Heure utiliser',
+        attr: {
+            placeholder: 'Heure utiliser'
+        }
+    }) }}<br>
+    {{ form_widget(form.idMotorbox, {
+        label: 'IdMotorbox',
+        attr: {
+            placeholder: 'ID Motorbox'
+            }
+    }) }}<br>
+
     <button class="button">{{ button_label|default('Sauvegarder') }}</button>
 {{ form_end(form) }}
 
