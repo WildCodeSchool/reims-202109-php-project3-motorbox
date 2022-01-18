@@ -165,10 +165,14 @@ label {
     font-size: 1.8rem;;
 }
 
+.container-fa-button img {
+    width: 3rem;
+}
+
 .progress-part {
-    width: 22rem;
-    margin-bottom: 1.2rem;
-    margin-top: 1.3rem;
+    width: 80%;
+    margin-bottom: 0.2rem;
+    margin-top: 0.8rem;
     border-radius: 20px;
 }
 
@@ -177,14 +181,18 @@ label {
 }
 
 ::-moz-progress-bar {
-    background-color: $color-5;
+    background: linear-gradient(45deg, #295c9e, #052783);
     border-radius: 20px;
 }
 
 .container-parts {
     margin-left: 1rem;
     color:$black;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
+}
+
+.container-part {
+    margin-top: 1rem;
 }
 
 .sub-title {
@@ -192,8 +200,8 @@ label {
     color: $white;
     border-radius: 3px;
     font-size: 1rem;
-    margin-bottom: 2rem;
-    margin-top: 1rem;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
     margin-left: 7rem;
     margin-right: auto;
     padding: 7px;
@@ -222,7 +230,7 @@ label {
 // START FONT AWESOME ICONS
 
 .fa-edit {
-    width: 2.5rem;
+    width: 2rem;
 }
 
 .fa-trash {
