@@ -14,7 +14,7 @@ body {
     font-size: x-large;
     font-weight: 600;
     min-height: 100vh;
-    background: #f5f5f5;
+    background: $color-body;
     color: $color-1;
 }
 
@@ -83,23 +83,34 @@ label {
     color: $bg-color;
     font-size: 1em;
     text-align: center;
-    text-decoration: none;
     justify-content: space-evenly;
+    align-items: center;
     bottom: 0;
     opacity: 0.8;
     width: 100vw;
     height: 10%;
     border-top-left-radius: 15%; 
-    border-top-right-radius: 15%;  
+    border-top-right-radius: 15%;
+    border-top: 1px solid $color-2; 
 }
 
 .navbar img {
     height: 100px;
-    padding-bottom: 8px;
+    margin-top: 8px;
 }
 
 .navbar-container{
     padding-top: 4rem;
+}
+
+.fa-home {
+    color: $color-2;
+    font-size: 3rem;
+}
+
+.fa-bars {
+    color: $color-2;
+    font-size: 3rem;
 }
 
 // END NAVBAR
