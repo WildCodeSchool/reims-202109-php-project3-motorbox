@@ -159,6 +159,10 @@ label {
     font-size: 1.8rem;;
 }
 
+.container-fa-button img {
+    width: 3rem;
+}
+
 .progress-part {
     width: 80%;
     margin-bottom: 0.2rem;
@@ -171,7 +175,7 @@ label {
 }
 
 ::-moz-progress-bar {
-    background-color: $color-5;
+    background: linear-gradient(45deg, #295c9e, #0d7272);
     border-radius: 20px;
 }
 
