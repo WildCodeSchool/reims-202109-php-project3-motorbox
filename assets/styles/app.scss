@@ -86,7 +86,11 @@ label {
     text-decoration: none;
     justify-content: space-evenly;
     bottom: 0;
+    opacity: 0.8;
     width: 100vw;
+    height: 10%;
+    border-top-left-radius: 40%; 
+    border-top-right-radius: 40%;  
 }
 
 .navbar img {
