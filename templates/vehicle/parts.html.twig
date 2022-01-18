@@ -25,7 +25,7 @@
         <h2 class="sub-title">Temps d'utilisation total : {{ vehicle.usedHour }}H</h2>
         <div class="container-parts">
             {% for part in vehicle.parts %}
-            <div>
+            <div class="container-part">
                 <div class="space-between">
                     <label for="{{ part.id }}">{{ part.name }}</label>
                         <div class="flex icons-button">
@@ -35,6 +35,7 @@
                 <progress class="progress-part" value = "{{ vehicle.usedHour }}" max = "{{ part.lifespan }}"> </progress>
                 <input class="part-input" type="checkbox" name="my-checkbox" id="{{ part.id }}">
             </div>
+            <hr>
             {% endfor %}
         </div>
         <div class="text-align-center">

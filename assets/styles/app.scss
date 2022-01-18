@@ -175,7 +175,7 @@ label {
 }
 
 ::-moz-progress-bar {
-    background: linear-gradient(45deg, #295c9e, #0d7272);
+    background: linear-gradient(45deg, #295c9e, #052783);
     border-radius: 20px;
 }
 
@@ -183,6 +183,9 @@ label {
     margin-left: 1rem;
     color:$black;
     margin-bottom: 4rem;
+}
+.container-part {
+    margin-top: 1rem;
 }
 
 .sub-title {
