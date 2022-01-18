@@ -181,8 +181,8 @@ label {
     font-size: 1.8rem;;
 }
 
-.container-fa-button img {
-    width: 3rem;
+.container-fa-button i {
+    font-size: 2.3rem;
 }
 
 .progress-part {
@@ -245,10 +245,6 @@ label {
 // END PART FORM VEHICLE
 // START FONT AWESOME ICONS
 
-.fa-edit {
-    width: 2rem;
-}
-
 .fa-trash {
     border: none;
 }
@@ -276,5 +272,9 @@ label {
     right: 0;
     bottom: 4rem;
     z-index: 1;
+}
+
+.fa-cog {
+    color: $black;
 }
 // END FONT AWESOME ICONS
