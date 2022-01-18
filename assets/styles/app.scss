@@ -126,6 +126,12 @@ label {
 // START REGISTER
 // END REGISTER
 // START INDEX VEHICLE
+
+.vehicleList {
+    display: flex;
+    height: 95vh;
+    overflow: scroll;
+}
 // END INDEX VEHICLE
 // START SHOW VEHICLE
 // END SHOW VEHICLE
@@ -241,7 +247,7 @@ label {
     margin-right: 1rem;
 }
 
-.new-vehicle {
+.addVehicle {
     position: fixed;
     right: 0;
     bottom: 4rem;

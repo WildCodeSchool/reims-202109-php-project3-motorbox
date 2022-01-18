@@ -3,8 +3,8 @@
 {% block title %}Vehicle index{% endblock %}
 
 {% block body %}
-    <section class="flex container-column">
-        <div class="new-vehicle" >
+    <section class="container-column vehicleList">
+        <div class="addVehicle" >
             <a href="{{ path('vehicle_new') }}"><img src="{{ asset('build/images/icons8.svg') }}"></img></a>
         </div>
         {% for vehicle in user.vehicles %}
