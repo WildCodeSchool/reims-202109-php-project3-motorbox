@@ -17,9 +17,8 @@
             </div>
             <div class= "container-fa-button">
                 <a class="link-fa-edit" href ="{{ path('vehicle_edit', {id: vehicle.id}) }}">
-                    <img class="fa-edit" src="{{ asset('build/images/edit-solid.svg') }}"></img>
+                    <img class="fa-edit" src="{{ asset('build/images/cog-solid.svg') }}"></img>
                 </a>
-                {{ include('vehicle/_delete_form.html.twig') }}
             </div>
         </div>
 
@@ -30,8 +29,7 @@
                 <div class="space-between">
                     <label for="{{ part.id }}">{{ part.name }}</label>
                         <div class="flex icons-button">
-                            <a href="{{ path('vehicle_parts_edit', {vehicle: vehicle.id, part: part.id}) }}"><img class="fa-edit" src="{{ asset('build/images/edit-solid.svg') }}"></img></a>
-                            {{ include('vehicle/_delete_parts_form.html.twig') }}
+                            <a href="{{ path('vehicle_parts_edit', {vehicle: vehicle.id, part: part.id}) }}"><img class="fa-edit" src="{{ asset('build/images/cog-solid.svg') }}"></img></a>
                         </div>
                 </div>
                 <progress class="progress-part" value = "{{ vehicle.usedHour }}" max = "{{ part.lifespan }}"> </progress>
