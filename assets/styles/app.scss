@@ -53,15 +53,15 @@ body {
     text-align: center;
     font-size: 0.9em;
     margin: 2rem;
-    padding: 1rem 2rem;
+    padding: 2rem;
     border-radius: 100px;
     background-color: $color-blue;
+    border: 2px solid $color-3;
     opacity: 0.8;
     color: $color-body;
-    border: 0;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    box-shadow: $color-blue-light 8px 16px 32px
+    box-shadow: $color-blue-light 3px 5px 8px;
 }
 
 .title {
