@@ -4,7 +4,6 @@ namespace App\Entity;
 
 use App\Repository\PartRepository;
 use Doctrine\ORM\Mapping as ORM;
-use phpDocumentor\Reflection\Types\Integer;
 
 /**
  * @ORM\Entity(repositoryClass=PartRepository::class)
