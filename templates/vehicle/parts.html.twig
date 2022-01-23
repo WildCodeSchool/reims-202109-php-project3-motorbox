@@ -34,7 +34,7 @@
                             {{ include('vehicle/_delete_parts_form.html.twig') }}
                         </div>
                 </div>
-                <progress class="progress-part" value = "{{ vehicle.usedHour - part.PartUseTime }}" max = "{{ part.lifespan }}"> </progress>
+                <progress class="progress-part" value = "{{ vehicle.usedHour - part.partUseTime }}" max = "{{ part.lifespan }}"> </progress>
                 <input class="part-input" type="checkbox" name="my-checkbox" id="{{ part.id }}">
             </div>
             {% endfor %}
