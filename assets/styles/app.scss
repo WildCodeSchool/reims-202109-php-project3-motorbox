@@ -14,7 +14,7 @@ body {
     font-size: x-large;
     font-weight: 600;
     min-height: 100vh;
-    background: #f5f5f5;
+    background: $color-body;
     color: $color-1;
 }
 
@@ -61,12 +61,12 @@ body {
     padding: 2rem;
     border-radius: 100px;
     background-color: $color-blue;
+    border: 2px solid $color-3;
     opacity: 0.8;
     color: $color-body;
-    border: 0;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    box-shadow: $color-blue-light 8px 16px 32px
+    box-shadow: $color-blue-light 3px 5px 8px;
 }
 
 .title {
@@ -88,18 +88,34 @@ label {
     color: $bg-color;
     font-size: 1em;
     text-align: center;
-    text-decoration: none;
     justify-content: space-evenly;
+    align-items: center;
     bottom: 0;
+    opacity: 0.8;
     width: 100vw;
+    height: 10%;
+    border-top-left-radius: 15%; 
+    border-top-right-radius: 15%;
+    border-top: 1px solid $color-2; 
 }
 
 .navbar img {
-    height: 50px;
+    height: 100px;
+    margin-top: 8px;
 }
 
 .navbar-container{
     padding-top: 4rem;
+}
+
+.fa-home {
+    color: $color-2;
+    font-size: 3rem;
+}
+
+.fa-bars {
+    color: $color-2;
+    font-size: 3rem;
 }
 
 // END NAVBAR
@@ -131,6 +147,12 @@ label {
 // START REGISTER
 // END REGISTER
 // START INDEX VEHICLE
+
+.vehicleList {
+    display: flex;
+    height: 95vh;
+    overflow: scroll;
+}
 // END INDEX VEHICLE
 // START SHOW VEHICLE
 // END SHOW VEHICLE
@@ -164,10 +186,14 @@ label {
     font-size: 1.8rem;;
 }
 
+.container-fa-button i {
+    font-size: 2.3rem;
+}
+
 .progress-part {
-    width: 22rem;
-    margin-bottom: 1.2rem;
-    margin-top: 1.3rem;
+    width: 80%;
+    margin-bottom: 0.2rem;
+    margin-top: 0.8rem;
     border-radius: 20px;
 }
 
@@ -176,14 +202,18 @@ label {
 }
 
 ::-moz-progress-bar {
-    background-color: $color-5;
+    background: linear-gradient(45deg, #295c9e, #052783);
     border-radius: 20px;
 }
 
 .container-parts {
     margin-left: 1rem;
     color:$black;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
+}
+
+.container-part {
+    margin-top: 1rem;
 }
 
 .sub-title {
@@ -191,8 +221,8 @@ label {
     color: $white;
     border-radius: 3px;
     font-size: 1rem;
-    margin-bottom: 2rem;
-    margin-top: 1rem;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
     margin-left: 7rem;
     margin-right: auto;
     padding: 7px;
@@ -220,10 +250,6 @@ label {
 // END PART FORM VEHICLE
 // START FONT AWESOME ICONS
 
-.fa-edit {
-    width: 2.5rem;
-}
-
 .fa-trash {
     border: none;
 }
@@ -246,4 +272,14 @@ label {
     margin-right: 1rem;
 }
 
+.addVehicle {
+    position: fixed;
+    right: 0;
+    bottom: 4rem;
+    z-index: 1;
+}
+
+.fa-cog {
+    color: $black;
+}
 // END FONT AWESOME ICONS
