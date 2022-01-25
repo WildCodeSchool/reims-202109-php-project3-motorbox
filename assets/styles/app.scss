@@ -74,7 +74,9 @@ body {
 .button {
     text-decoration: none;
     text-align: center;
-    padding: .5rem 1rem;
+    // font-size: 1rem;
+    margin: 2rem;
+    padding: 2rem;
     border-radius: 100px;
     background-color: $color-blue;
     border: 2px solid $color-3;
@@ -87,6 +89,12 @@ body {
     &.danger {
         background-color: $color-danger;
     }
+}
+
+// Used for edit and delete button
+.form-button {
+    margin: 0rem;
+    padding: .5rem 1rem;
 }
 
 .title {
