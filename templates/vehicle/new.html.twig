@@ -1,12 +1,13 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Motorbox - Nouveau véhicule{% endblock %}
+{% block title %}Motorbox - Nouveau véhicule
+{% endblock %}
 
 {% block body %}
-        <a href="{{ path('vehicle_index') }}">Retour à la liste</a>
-        <div class="flex text-align-center container-column">
-            <h1 class="title">Créer un nouveau véhicule</h1>
-            {{ include('vehicle/_form.html.twig') }}
-        </div>
+	<a href="{{ path('vehicle_index') }}">Retour à la liste</a>
+	<div class="flex text-align-center container-column">
+		<h1 class="title">Créer un nouveau véhicule</h1>
+		{{ include('vehicle/_form.html.twig', {'showDeleteForm': false}) }}
+	</div>
 
 {% endblock %}
