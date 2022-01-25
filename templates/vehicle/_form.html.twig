@@ -1,50 +1,53 @@
 <div class="container-column-center ">
-    <div class="form-content">
-        {{ form_start(form, {
+	<div class="form-content">
+		{{ form_start(form, {
             attr: {
-                class: 'form-vehicle'
-                }
+                class: 'form-vehicle',
+                id: 'form-vehicle'
+            }
         }) }}
-            {{ form_widget(form.name, {
+		{{ form_widget(form.name, {
                 label: 'Nom',
                 attr: {
                     placeholder: 'Nom'
                     }
             }) }}<br>
-            {{ form_widget(form.brand, {
+		{{ form_widget(form.brand, {
                 label: 'Marque',
                 attr: {
                     placeholder: 'Marque'
                 }
             }) }}<br>
-            {{ form_widget(form.model, {
+		{{ form_widget(form.model, {
                 label: 'Modele',
                 attr: {
                     placeholder: 'Modèle'
                     }
             }) }}<br>
-            {{ form_widget(form.productYear, {
+		{{ form_widget(form.productYear, {
                 label: 'Année',
                 attr: {
                     placeholder: 'Année'
                     }
             }) }}<br>
-            {{ form_widget(form.usedHour, {
+		{{ form_widget(form.usedHour, {
                 label: 'Heure utiliser',
                 attr: {
                     placeholder: 'Heure utiliser'
                 }
             }) }}<br>
-            {{ form_widget(form.idMotorbox, {
+		{{ form_widget(form.idMotorbox, {
                 label: 'IdMotorbox',
                 attr: {
                     placeholder: 'ID Motorbox'
                     }
             }) }}
-        {{ form_end(form) }}
-    </div>
-    <div class="button-bar">
-        {{ include('vehicle/_delete_form.html.twig') }}
-        <button class="button">{{ button_label|default('Sauvegarder') }}</button>
-    </div>
+		{{ form_end(form) }}
+	</div>
+	<div class="button-bar">
+		{% if showDeleteForm %}
+			{{ include('vehicle/_delete_form.html.twig') }}
+		{% endif %}
+		<button type="submit" form="vehicle-form" class="button">{{ button_label|default('Sauvegarder') }}</button>
+	</div>
 </div>
