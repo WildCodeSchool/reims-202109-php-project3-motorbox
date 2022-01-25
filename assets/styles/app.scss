@@ -108,6 +108,28 @@ label {
     padding-top: 4rem;
 }
 
+.drop-container {
+    position: absolute;
+    bottom: 100%;
+    font-size: 2.5rem;
+    background: $color-body;
+    width: 100vw;
+    padding: 1rem;
+
+    clip-path: circle(0px at 80% 110%);
+    -webkit-clip-path: circle(0px at 80% 110%);
+    transition: all 1s ease-in;
+
+    ul {
+        list-style: none;
+    }
+}
+
+.drop-container.open {
+    clip-path: circle(200% at 50% 50%);
+    -webkit-clip-path: circle(200% at 50% 50%);
+}
+
 .fa-home {
     color: $color-2;
     font-size: 3rem;

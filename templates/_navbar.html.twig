@@ -2,18 +2,19 @@
     <div class="navbar">
         <a class="" href="{{ path('vehicle_index') }}"><i class="fas fa-home"></i></a>
         <img src="{{ asset('build/images/Motorboxcf.png') }}">
-        <div class="hamburger"><i class="fas fa-bars"></i>
-            <div class="drop-container">
-                <ul class="drop-links">
-                    <li><a href="#">Guide boîtier</a></li>
-                    <li><a href="#">CGU</a></li>
-                    <li><a href="#">CGV</a></li>
-                    <li><a href="#">Contactez-nous</a></li>
-                    {% if app.user %}
-                        <li><a href="/logout">Déconnection</a></li>
-                    {% endif %}
-                </ul>
-            </div>
+        <div class="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="drop-container">
+            <ul class="drop-links">
+                <li><a href="#">Guide boîtier</a></li>
+                <li><a href="#">CGU</a></li>
+                <li><a href="#">CGV</a></li>
+                <li><a href="#">Contactez-nous</a></li>
+                {% if app.user %}
+                    <li><a href="/logout">Déconnection</a></li>
+                {% endif %}
+            </ul>
         </div>
     </div>
 </div>
