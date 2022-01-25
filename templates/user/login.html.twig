@@ -10,20 +10,19 @@
                <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
             {% endif %}
             <div class="register-form">
-            <form action="{{ path('login') }}" method="post">
-                <div>
-                    <label for="username">Email:</label>
-                    <input type="text" id="username" name="_username" placeholder="Email"value="{{ last_username }}"/>
-                </div>
-                <div>
-                    <label for="password">Mot de passe:</label>
-                    <input type="password" id="password" name="_password" placeholder="Mot de passe"/>
-                </div>
+                <form action="{{ path('login') }}" method="post">
+                    <div>
+                        <label for="username">Email:</label>
+                        <input type="text" id="username" name="_username" placeholder="Email"value="{{ last_username }}"/>
+                    </div>
+                    <div>
+                        <label for="password">Mot de passe:</label>
+                        <input type="password" id="password" name="_password" placeholder="Mot de passe"/>
+                    </div>
+                    <input type="hidden" name="_target_path" value="{{ path('vehicle_index') }}"/>
+                    <button class="button login-button" type="submit">Valider</button>
+                </form>
             </div>
-
-                <input type="hidden" name="_target_path" value="{{ path('vehicle_index') }}"/>
-                <button class="button login-button" type="submit">Valider</button>
-           </form>
-        </div>
-	</div>
+	    </div>
+    </div>
 {% endblock %}

@@ -14,26 +14,31 @@ class PartFixtures extends Fixture implements DependentFixtureInterface
             'name' => 'Batterie',
             'lifespan' => 10,
             'vehicleReference' => 'vehicle_0',
+            'partUseTime' => '0.00',
         ],
         [
             'name' => 'Echap',
             'lifespan' => 65,
             'vehicleReference' => 'vehicle_0',
+            'partUseTime' => '0.00',
         ],
         [
             'name' => 'Pneu avant',
             'lifespan' => 5,
             'vehicleReference' => 'vehicle_0',
+            'partUseTime' => '0.00',
         ],
         [
             'name' => 'Frein à main',
             'lifespan' => 23,
             'vehicleReference' => 'vehicle_0',
+            'partUseTime' => '0.00',
         ],
         [
             'name' => 'Pédale de frein',
             'lifespan' => 35,
             'vehicleReference' => 'vehicle_0',
+            'partUseTime' => '0.00',
         ],
     ];
 
