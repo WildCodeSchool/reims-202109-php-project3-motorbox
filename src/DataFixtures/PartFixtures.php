@@ -11,31 +11,31 @@ class PartFixtures extends Fixture implements DependentFixtureInterface
 {
     public const PARTS = [
         [
-            'name' => 'Battery',
+            'name' => 'Batterie',
             'lifespan' => 10,
             'vehicleReference' => 'vehicle_0',
             'partUseTime' => '0.00',
         ],
         [
-            'name' => 'Gas tank',
+            'name' => 'Echap',
             'lifespan' => 65,
             'vehicleReference' => 'vehicle_0',
             'partUseTime' => '0.00',
         ],
         [
-            'name' => 'Front tire',
+            'name' => 'Pneu avant',
             'lifespan' => 5,
             'vehicleReference' => 'vehicle_0',
             'partUseTime' => '0.00',
         ],
         [
-            'name' => 'Handle Bar',
+            'name' => 'Frein à main',
             'lifespan' => 23,
             'vehicleReference' => 'vehicle_0',
             'partUseTime' => '0.00',
         ],
         [
-            'name' => 'Brake pedal',
+            'name' => 'Pédale de frein',
             'lifespan' => 35,
             'vehicleReference' => 'vehicle_0',
             'partUseTime' => '0.00',
