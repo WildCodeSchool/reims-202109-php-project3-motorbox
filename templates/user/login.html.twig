@@ -11,19 +11,19 @@
             {% endif %}
             <div class="register-form">
 
-            <form action="{{ path('login') }}" method="post">
-                <div>
-                    <label for="username">Email:</label>
-                    <input type="text" id="username" name="_username" placeholder="Email"value="{{ last_username }}"/>
-                </div>
-                <div>
-                    <label for="password">Mot de passe:</label>
-                    <input type="password" id="password" name="_password" placeholder="Mot de passe"/>
-                </div>
+                <form action="{{ path('login') }}" method="post">
+                    <div>
+                        <label for="username">Email:</label>
+                        <input type="text" id="username" name="_username" placeholder="Email"value="{{ last_username }}"/>
+                    </div>
+                    <div>
+                        <label for="password">Mot de passe:</label>
+                        <input type="password" id="password" name="_password" placeholder="Mot de passe"/>
+                    </div>
+                    <button class="button" type="submit">Valider</button>
+                    <input type="hidden" name="_target_path" value="{{ path('vehicle_index') }}"/>
+                </form>
             </div>
-                <input type="hidden" name="_target_path" value="{{ path('vehicle_index') }}"/>
-           </form>
-            <button class="button" type="submit">Valider</button>
         </div>
 	</div>
 {% endblock %}
