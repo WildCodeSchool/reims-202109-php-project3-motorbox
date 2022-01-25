@@ -114,7 +114,7 @@ label {
     background: $color-body;
     width: 100vw;
     padding: 1rem;
-    height: 40vh;
+    height: 50vh;
     clip-path: circle(0px at 80% 110%);
     -webkit-clip-path: circle(0px at 80% 110%);
     transition: all 1s ease-in;
@@ -128,11 +128,12 @@ label {
     }
 
     li {
-        margin-bottom: 1rem;
+        margin-bottom: 1.5rem;
     }
 
     a {
         text-decoration: none;
+        color: $color-blue-light;
     }
 }
 
