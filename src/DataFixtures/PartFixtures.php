@@ -14,26 +14,31 @@ class PartFixtures extends Fixture implements DependentFixtureInterface
             'name' => 'Battery',
             'lifespan' => 10,
             'vehicleReference' => 'vehicle_0',
+            'partUseTime' => '0.00',
         ],
         [
             'name' => 'Gas tank',
             'lifespan' => 65,
             'vehicleReference' => 'vehicle_0',
+            'partUseTime' => '0.00',
         ],
         [
             'name' => 'Front tire',
             'lifespan' => 5,
             'vehicleReference' => 'vehicle_0',
+            'partUseTime' => '0.00',
         ],
         [
             'name' => 'Handle Bar',
             'lifespan' => 23,
             'vehicleReference' => 'vehicle_0',
+            'partUseTime' => '0.00',
         ],
         [
             'name' => 'Brake pedal',
             'lifespan' => 35,
             'vehicleReference' => 'vehicle_0',
+            'partUseTime' => '0.00',
         ],
     ];
 
