@@ -5,7 +5,7 @@
 
         {% include "_logo.html.twig" %}
 
-		<div class="flex container-column">
+		<div class="container-column-center">
             {% if error %}
                <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
             {% endif %}
@@ -21,10 +21,9 @@
                     <input type="password" id="password" name="_password" placeholder="Mot de passe"/>
                 </div>
             </div>
-
                 <input type="hidden" name="_target_path" value="{{ path('vehicle_index') }}"/>
-                <button class="button login-button" type="submit">Valider</button>
            </form>
+            <button class="button" type="submit">Valider</button>
         </div>
 	</div>
 {% endblock %}
