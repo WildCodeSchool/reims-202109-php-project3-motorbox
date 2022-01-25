@@ -40,7 +40,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     private $password;
 
     /**
-     * @ORM\OneToMany(targetEntity=Vehicle::class, mappedBy="user", orphanRemoval=true)
+     * @ORM\OneToMany(targetEntity=Vehicle::class, mappedBy="owner", orphanRemoval=true)
      * @var Collection<Vehicle>
      */
     private Collection $vehicles;
@@ -151,7 +151,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     {
         if (!$this->vehicles->contains($vehicle)) {
             $this->vehicles[] = $vehicle;
-            $vehicle->setUser($this);
+            $vehicle->setOwner($this);
         }
 
         return $this;

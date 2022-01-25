@@ -12,6 +12,7 @@ use App\Entity\Part;
 use App\Form\VehicleType;
 use App\Form\PartType;
 use App\Repository\VehicleRepository;
+use Symfony\Component\Security\Core\Exception\AccessDeniedException;
 
 #[Route('/vehicle')]
 class VehicleController extends AbstractController
@@ -40,7 +41,7 @@ class VehicleController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $vehicle->setUser($user);
+            $vehicle->setOwner($user);
             $entityManager->persist($vehicle);
             $entityManager->flush();
 
@@ -93,6 +94,10 @@ class VehicleController extends AbstractController
     #[Route('/{vehicle}/parts', name: 'vehicle_parts', methods: ['GET'])]
     public function parts(Vehicle $vehicle): Response
     {
+        if (!($this->getUser() == $vehicle->getOwner())) {
+            throw new AccessDeniedException('Vous ne pouvez pas acceder a ce vehicule');
+        }
+
         return $this->render('vehicle/parts.html.twig', [
             'vehicle' => $vehicle,
         ]);
