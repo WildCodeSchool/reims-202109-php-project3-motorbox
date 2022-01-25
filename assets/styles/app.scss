@@ -111,7 +111,6 @@ label {
     justify-content: space-evenly;
     align-items: center;
     bottom: 0;
-    opacity: 0.8;
     width: 100vw;
     height: 10%;
     border-top-left-radius: 15%; 
@@ -128,6 +127,41 @@ label {
     padding-top: 4rem;
 }
 
+.drop-container {
+    position: absolute;
+    bottom: 100%;
+    font-size: 1.7rem;
+    background: $color-body;
+    width: 100vw;
+    padding: 1rem;
+    height: 50vh;
+    clip-path: circle(0px at 80% 110%);
+    -webkit-clip-path: circle(0px at 80% 110%);
+    transition: all 1s ease-in;
+
+    ul {
+        list-style: none;
+    }
+
+    li:first-child {
+        margin-top: 2.5rem;
+    }
+
+    li {
+        margin-bottom: 1.5rem;
+    }
+
+    a {
+        text-decoration: none;
+        color: $color-blue-light;
+    }
+}
+
+.drop-container.open {
+    clip-path: circle(100% at 50% 50%);
+    -webkit-clip-path: circle(200% at 50% 50%);
+}
+
 .fa-home {
     color: $color-2;
     font-size: 3rem;
@@ -140,10 +174,6 @@ label {
 
 // END NAVBAR
 // START LOGO
-.logo-container {
-    margin-bottom: 2rem;
-}
-
 .logo {
     width: auto;
     max-height: 50vh;
