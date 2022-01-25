@@ -1,5 +1,11 @@
-<div class="navbar">
-    <a class="" href="{{ path('vehicle_index') }}"><i class="fas fa-home"></i></a>
-    <img src="{{ asset('build/images/Motorboxcf.png') }}">
-    <a class="" href="{{ path('app_logout') }}"><i class="fas fa-bars"></i></a>
+<div class="navbar-container">
+    <div class="navbar">
+    {% if app.user %}
+        <a class="" href="{{ path('vehicle_index') }}"><i class="fas fa-home"></i></a>
+    {% else %}
+        <a class="" href="{{ path('home') }}"><i class="fas fa-home"></i></a>
+    {% endif %}
+        <img src="{{ asset('build/images/Motorboxcf.png') }}">
+        <a class="" href="{{ path('app_logout') }}"><i class="fas fa-bars"></i></a>
+    </div>
 </div>
