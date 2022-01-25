@@ -48,6 +48,7 @@ class PartFixtures extends Fixture implements DependentFixtureInterface
             $part = new Part();
             $part->setName($partData['name']);
             $part->setLifespan($partData['lifespan']);
+            $part->setPartUseTime($partData['partUseTime']);
             $part->setVehicle(
                 $this->getReference($partData['vehicleReference'])
             );
