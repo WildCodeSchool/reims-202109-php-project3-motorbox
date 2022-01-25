@@ -6,6 +6,7 @@
     <h1>Créer une nouvelle pièce</h1>
 
     {{ include('part/_form.html.twig') }}
+    <button type="submit" form="part_form" class="button">Sauvegarder</button>
 
     <a href="{{ path('part_index') }}">Retour à la liste</a>
 {% endblock %}

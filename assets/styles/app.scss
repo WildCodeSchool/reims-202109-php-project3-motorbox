@@ -47,13 +47,23 @@ body {
     color: #6a6b6c;
 }
 
+.button-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    padding: 1rem;
+
+    & > * + * {
+        margin-left: 1rem;
+    }
+}
+
 // Used for link and button
 .button {
     text-decoration: none;
     text-align: center;
-    font-size: 0.9em;
-    margin: 2rem;
-    padding: 2rem;
+    padding: .5rem 1rem;
     border-radius: 100px;
     background-color: $color-blue;
     border: 2px solid $color-3;
@@ -62,25 +72,11 @@ body {
     letter-spacing: 0.1em;
     text-transform: uppercase;
     box-shadow: $color-blue-light 3px 5px 8px;
-}
 
-// button  for "return to list"
-#button-list {
-    text-decoration: none;
-    text-align: center;
-    font-size: 0.9em;
-    margin: 2rem;
-    padding: 2rem;
-    border-radius: 100px;
-    background-color: $color-blue;
-    border: 2px solid $color-3;
-    opacity: 0.8;
-    color: $color-body;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    box-shadow: $color-blue-light 3px 5px 8px;
+    &.danger {
+        background-color: $color-danger;
+    }
 }
-
 
 .title {
     margin-bottom: 2rem;
