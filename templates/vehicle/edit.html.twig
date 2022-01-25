@@ -1,17 +1,21 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Modifier {{ vehicle.name }}{% endblock %}
+{% block title %}Modifier
+	{{ vehicle.name }}
+{% endblock %}
 
 {% block body %}
 
-    <div class="text-align-center">
-        <h1 class="title-form">Modifier {{ vehicle.name }}</h1>
+	<div class="text-align-center">
+		<h1 class="title-form">Modifier
+			{{ vehicle.name }}</h1>
 
-        {{ include('vehicle/_form.html.twig', {'button_label': 'Modifier'}) }}
-
-        <a href="{{ path('vehicle_index') }}">Retourner à la liste</a>
-
-        {{ include('vehicle/_delete_form.html.twig') }}
-    </div>
-    {% include "_navbar.html.twig" %}
+		{{ include('vehicle/_form.html.twig', {'button_label': 'Modifier'}) }}
+		<br>
+		<a class="button" href="{{ path('vehicle_index') }}">Retourner à la liste</a>
+		<br>
+		<br>
+		{{ include('vehicle/_delete_form.html.twig') }}
+	</div>
+	{% include "_navbar.html.twig" %}
 {% endblock %}
