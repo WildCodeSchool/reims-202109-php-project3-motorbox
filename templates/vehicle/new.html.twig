@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}New Vehicle{% endblock %}
+{% block title %}Motorbox - Nouveau véhicule{% endblock %}
 
 {% block body %}
         <a href="{{ path('vehicle_index') }}">Retour à la liste</a>
@@ -8,6 +8,5 @@
             <h1 class="title">Créer un nouveau véhicule</h1>
             {{ include('vehicle/_form.html.twig') }}
         </div>
-    {% include "_navbar.html.twig" %}
 
 {% endblock %}
