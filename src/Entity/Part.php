@@ -33,6 +33,11 @@ class Part
      */
     private Vehicle $vehicle;
 
+    /**
+     * @ORM\Column(type="decimal", precision=7, scale=2)
+     */
+    private string $partUseTime;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -70,6 +75,18 @@ class Part
     public function setVehicle(Vehicle $vehicle): self
     {
         $this->vehicle = $vehicle;
+
+        return $this;
+    }
+
+    public function getPartUseTime(): ?string
+    {
+        return $this->partUseTime;
+    }
+
+    public function setPartUseTime(string $partUseTime): self
+    {
+        $this->partUseTime = $partUseTime;
 
         return $this;
     }
