@@ -3,11 +3,12 @@
 {% block title %}Motorbox - Edition de pièce{% endblock %}
 
 {% block body %}
-    <h1>Editer pièce</h1>
-
-    {{ include('part/_form.html.twig', {'button_label': 'Update'}) }}
-
     <a href="{{ path('part_index') }}">Retour à la liste</a>
 
+    <h1>Editer pièce</h1>
+
+    {{ include('part/_form.html.twig') }}
+
+    <button type="submit" form="part_form" class="button">Update</button>
     {{ include('part/_delete_form.html.twig') }}
 {% endblock %}
