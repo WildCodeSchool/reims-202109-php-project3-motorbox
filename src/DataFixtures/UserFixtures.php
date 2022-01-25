@@ -26,7 +26,6 @@ class UserFixtures extends Fixture
             $contributor,
             'contributorpassword'
         );
-        $this->addReference('user_contributor@monsite.com', $contributor);
 
         $contributor->setPassword($hashedPassword);
         $manager->persist($contributor);

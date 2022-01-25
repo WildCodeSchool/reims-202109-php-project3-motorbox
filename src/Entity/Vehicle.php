@@ -50,16 +50,16 @@ class Vehicle
     private string|null $idMotorbox;
 
     /**
-     * @ORM\ManyToOne(targetEntity=User::class, inversedBy="vehicles")
-     * @ORM\JoinColumn(nullable=false)
-     */
-    private User $user;
-
-    /**
      * @ORM\OneToMany(targetEntity=Part::class, mappedBy="vehicle", orphanRemoval=true)
      * @var Collection<Part>
      */
     private Collection $parts;
+
+    /**
+     * @ORM\ManyToOne(targetEntity=User::class, inversedBy="vehicles")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private User $owner;
 
     public function __construct()
     {
@@ -143,18 +143,6 @@ class Vehicle
         return $this;
     }
 
-    public function getUser(): User
-    {
-        return $this->user;
-    }
-
-    public function setUser(User $user): self
-    {
-        $this->user = $user;
-
-        return $this;
-    }
-
     /**
      * @return Collection|Part[]
      */
@@ -176,6 +164,18 @@ class Vehicle
     public function removePart(Part $part): self
     {
         $this->parts->removeElement($part);
+
+        return $this;
+    }
+
+    public function getOwner(): User
+    {
+        return $this->owner;
+    }
+
+    public function setOwner(User $owner): self
+    {
+        $this->owner = $owner;
 
         return $this;
     }

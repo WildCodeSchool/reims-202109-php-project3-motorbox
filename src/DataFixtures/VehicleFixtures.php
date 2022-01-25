@@ -16,7 +16,6 @@ class VehicleFixtures extends Fixture implements DependentFixtureInterface
             'model' => 'Suzuki',
             'productYear' => 1920,
             'usedHour' => '5',
-            'userReference' => 'user_contributor@monsite.com',
             'ownerReference' => 'contributor',
         ]
     ];
@@ -30,9 +29,6 @@ class VehicleFixtures extends Fixture implements DependentFixtureInterface
             $vehicle->setProductYear($vehicleData['productYear']);
             $vehicle->setUsedHour($vehicleData['usedHour']);
             $vehicle->setOwner($this->getReference($vehicleData['ownerReference']));
-            $vehicle->setUser(
-                $this->getReference($vehicleData['userReference'])
-            );
             $this->addReference('vehicle_' . $key, $vehicle);
 
             $manager->persist($vehicle);
