@@ -7,13 +7,13 @@
     <div class="text-align-center">
         <h1 class="title-form">Modifier {{ part.name }}</h1>
 
-    {{ include('part/_form.html.twig', {'button_label': 'Modifier'}) }}
+        {{ include('part/_form.html.twig', {'button_label': 'Modifier'}) }}
 
-    {{ include('vehicle/_delete_parts_form.html.twig') }}
-    <a class="link-style" href="{{ path('vehicle_parts', {vehicle: vehicle.id}) }}">Retour à la liste</a>
+        {{ include('vehicle/_delete_parts_form.html.twig') }}
+        <a class="button-list" href="{{ path('vehicle_parts', {vehicle: vehicle.id}) }}">Retour à la liste</a>
 
     </div>
     <div class="navbar-container">
-    {% include "_navbar.html.twig" %}
+        {% include "_navbar.html.twig" %}
     </div>
 {% endblock %}
