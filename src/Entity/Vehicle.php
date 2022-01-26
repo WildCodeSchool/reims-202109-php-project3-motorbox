@@ -119,7 +119,7 @@ class Vehicle
         return $this;
     }
 
-    public function getUsedHour(): ?string
+    public function getUsedHour(): string
     {
         return $this->usedHour;
     }
