@@ -108,6 +108,7 @@ class VehicleController extends AbstractController
     {
         $part = new Part();
         $part->setVehicle($vehicle);
+        $part->setPartUseTime($vehicle->getUsedHour());
         $form = $this->createForm(PartType::class, $part);
         $form->handleRequest($request);
 
