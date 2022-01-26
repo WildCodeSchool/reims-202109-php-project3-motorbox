@@ -3,7 +3,7 @@
 		{{ form_start(form, {
             attr: {
                 class: 'form-vehicle',
-                id: 'form-vehicle'
+                id: 'vehicle_form'
             }
         }) }}
 		{{ form_widget(form.name, {
@@ -48,6 +48,6 @@
 		{% if showDeleteForm %}
 			{{ include('vehicle/_delete_form.html.twig') }}
 		{% endif %}
-		<button type="submit" form="vehicle-form" class="button">{{ button_label|default('Sauvegarder') }}</button>
+		<button type="submit" form="vehicle_form" class="button">{{ button_label|default('Sauvegarder') }}</button>
 	</div>
 </div>
