@@ -3,7 +3,7 @@
 {% block title %}{{ parent() }} - Nouveau véhicule{% endblock %}
 
 {% block body %}
-	<a href="{{ path('vehicle_index') }}">Retour à la liste</a>
+    <a href="{{ path('vehicle_index') }}"><img class="return" src="{{ asset('build/images/return.svg') }}"></img></a>
 	<div class="text-align-center"><h1 class="title">Créer un nouveau véhicule</h1></div>
 	{{ include('vehicle/_form.html.twig', {'showDeleteForm': false}) }}
 {% endblock %}

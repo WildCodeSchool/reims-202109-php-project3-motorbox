@@ -18,7 +18,7 @@
         </tbody>
     </table>
 
-    <a class="button" href="{{ path('vehicle_parts', {vehicle: vehicle.id}) }}">Retour à la liste</a>
+    <a class="button" href="{{ path('vehicle_parts', {vehicle: vehicle.id}) }}"><img class="return" src="{{ asset('build/images/return.svg') }}"></img></a>
 
     <a class="button" href="{{ path('vehicle_parts_edit', {vehicle: vehicle.id, part: part.id}) }}">éditer</a>
 
