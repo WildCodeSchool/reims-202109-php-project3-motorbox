@@ -31,6 +31,10 @@ body {
     flex-direction: column;
 }
 
+.align-items-center {
+    align-items: center;
+}
+
 .container-column-center {
     display: flex;
     flex-direction: column;
@@ -230,6 +234,14 @@ label {
     height: 95vh;
     overflow: scroll;
 }
+
+.cards {
+    margin-top: 2rem;
+    border-radius: 30px;
+    width: 90%;
+    background: linear-gradient($color-blue, $color-2);
+}
+
 // END INDEX VEHICLE
 // START SHOW VEHICLE
 // END SHOW VEHICLE

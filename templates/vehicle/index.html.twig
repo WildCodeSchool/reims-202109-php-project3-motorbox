@@ -1,15 +1,14 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Index Véhicule{% endblock %}
+{% block title %}{{ parent() }} - Véhicules{% endblock %}
 
 {% block body %}
-    <section class="container-column vehicleList">
+    <section class="container-column align-items-center vehicleList">
         <div class="addVehicle" >
             <a href="{{ path('vehicle_new') }}"><img src="{{ asset('build/images/icons8.svg') }}"></img></a>
         </div>
         {% for vehicle in user.vehicles %}
-            <a class="button" href="{{ path('vehicle_parts', {vehicle: vehicle.id}) }}" ><p class="box">{{ vehicle.name }}<br>{{ vehicle.brand }} {{ vehicle.model }}</p></a>
+            <a class="button cards" href="{{ path('vehicle_parts', {vehicle: vehicle.id}) }}" ><p class="box">{{ vehicle.name }}<br>{{ vehicle.brand }} {{ vehicle.model }}</p></a>
         {% endfor %}
     </section>
-
 {% endblock %}
