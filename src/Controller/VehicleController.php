@@ -128,15 +128,6 @@ class VehicleController extends AbstractController
         ]);
     }
 
-    #[Route('/{vehicle}/parts/{part}', name: 'vehicle_parts_show', methods: ['GET'])]
-    public function partsShow(Vehicle $vehicle, Part $part): Response
-    {
-        return $this->render('vehicle/parts_show.html.twig', [
-            'vehicle' => $vehicle,
-            'part' => $part,
-        ]);
-    }
-
     #[Route('/{vehicle}/parts/{part}/edit', name: 'vehicle_parts_edit', methods: ['GET', 'POST'])]
     public function partsEdit(
         Request $request,
