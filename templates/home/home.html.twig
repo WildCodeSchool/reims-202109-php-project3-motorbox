@@ -11,17 +11,13 @@
 {% endblock %}
 
 {% block body %}
-	<div class="flex container-column">
-
-		{% include "_logo.html.twig" %}
-
-		<section class="flex container-column">
-			<a class="button" href="{{ path('app_register') }}">
-				S'inscrire
-			</a>
-			<a class="button" href="{{ path('login') }}">
-				Se connecter
-			</a>
-		</section>
+	{% include "_logo.html.twig" %}
+	<div class="homepage">
+		<a class="button button-login" href="{{ path('app_register') }}">
+			S'inscrire
+		</a>
+		<a class="button button-login" href="{{ path('login') }}">
+			Se connecter
+		</a>
 	</div>
 {% endblock %}

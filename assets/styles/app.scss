@@ -38,20 +38,9 @@ body {
     padding: 1rem;
 }
 
-.register-form {
-    text-align: right;
-    margin-right: 2rem;
-}
-
 .space-between {
     display: flex;
     justify-content: space-between;
-}
-
-.title-form {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    margin-top: 2rem;
 }
 
 .link-style {
@@ -62,8 +51,8 @@ body {
 .button-bar {
     display: flex;
     flex-direction: row;
-    justify-content: end;
-    align-items: end;
+    justify-content: center;
+    align-items: center;
     padding: 1rem;
 
     & > * + * {
@@ -75,6 +64,8 @@ body {
 .button {
     text-decoration: none;
     text-align: center;
+    // font-size: 1rem;
+    margin: 2rem;
     padding: .5rem 1rem;
     border-radius: 100px;
     background-color: $color-blue;
@@ -90,9 +81,14 @@ body {
     }
 }
 
+// used for /user/* pages
+.button-login {
+    margin:1rem;
+    padding: 1rem;
+}
+
 .title {
-    margin-bottom: 2rem;
-    margin-top: 1rem;
+    margin: 1rem auto;
     font-size: 2rem;
 }
 
@@ -176,28 +172,52 @@ label {
 // END NAVBAR
 // START LOGO
 .logo {
-    width: auto;
-    max-height: 50vh;
+    max-width: 90vw;
+    height: auto;
+    margin: 0 auto;
 }
 
 // END LOGO
 // START HOME
+.homepage {
+    width: 70vw;
+    margin: 4em auto;
+
+    a {
+        display: block;
+        margin-bottom: 3rem;
+    }
+
+}
+
 // END HOME
 // START LOGIN
-
-.login-row {
-    margin: 1rem;
-    padding: .5rem;
-}
-
-.login-button {
-    margin-top: 1rem;
-    padding: 1rem 2rem;
-}
-
 // END LOGIN
 // START REGISTER
 // END REGISTER
+// START FORM
+// used for /user/* pages and part form and vehicle form
+.form-container {
+    width: 70vw;
+    margin: 0 auto;
+    text-align: center;
+
+    h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    form {
+        input {
+            padding: 0.5rem;
+            font-size: 1rem;;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+    }
+}
+// END FORM
 // START INDEX VEHICLE
 
 .vehicleList {
@@ -208,15 +228,6 @@ label {
 // END INDEX VEHICLE
 // START SHOW VEHICLE
 // END SHOW VEHICLE
-// START FORM VEHICLE
-
-.form-vehicle input {
-    padding: 0.5rem;
-    font-size: 1rem;;
-    margin-bottom: 1rem;
-}
-
-// END FORM VEHICLE
 // START NEW VEHICLE
 // END NEW VEHICLE
 // START EDIT VEHICLE
@@ -302,21 +313,7 @@ label {
 }
 
 // END PARTS VEHICLE
-// START PART FORM VEHICLE
-
-.container-form-part {
-    align-items: center;
-}
-
-.container-form-part input {
-    padding: 0.5rem;
-    font-size: 1rem;;
-    margin-bottom: 1rem;
-}
-
-// END PART FORM VEHICLE
 // START FONT AWESOME ICONS
-
 .fa-trash {
     border: none;
 }

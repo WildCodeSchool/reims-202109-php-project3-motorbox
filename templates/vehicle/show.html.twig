@@ -42,7 +42,7 @@
 
     <div class="button-bar">
         {{ include('vehicle/_delete_form.html.twig') }}
-        <a class="button" href="{{ path('vehicle_edit', {'id': vehicle.id}) }}">edit</a>
+        <a class="button form-button" href="{{ path('vehicle_edit', {'id': vehicle.id}) }}">edit</a>
     </div>
     {% include "_navbar.html.twig" %}
 {% endblock %}

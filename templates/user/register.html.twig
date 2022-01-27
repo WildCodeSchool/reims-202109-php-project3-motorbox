@@ -1,33 +1,30 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Inscription
-{% endblock %}
+{% block title %}{{ parent() }} - Inscription{% endblock %}
 
 {% block body %}
-	<div class="flex text-align-center container-column">
-
-		{% include "_logo.html.twig" %}
+	{% include "_logo.html.twig" %}
+	<div class="form-container">
 		<h1>Inscription</h1>
-		<div class="register-form">
-			{{ form_start(registrationForm) }}
-			{{ form_row(registrationForm.email, {
-            attr: {
-                    placeholder: 'Email'
-                }
-            }) }}
-			{{ form_row(registrationForm.password, {
-                label: 'Mot de passe',
-                attr: {placeholder: 'Mot de passe'}
-            }) }}
-
-		</div>
-
-		{{ form_row(registrationForm.agreeTerms, {
-                label: 'Accepter les conditions'
-            }) }}
-		<button type="submit" class="button">Valider</button>
+		{{ form_start(registrationForm, {
+			attr: {id: 'register_form'}
+		}) }}
+			<div>
+				{{ form_widget(registrationForm.email, {
+					attr: {placeholder: 'E-mail'}
+				}) }}
+			</div>
+			<div>
+				{{ form_widget(registrationForm.password, {
+					attr: {placeholder: 'Mot de passe'}
+				}) }}
+			</div>
+			<div>
+				{{ form_row(registrationForm.agreeTerms, {
+					label: 'Accepter les conditions'
+				}) }}
+			</div>
 		{{ form_end(registrationForm) }}
-
+		<button type="submit" form="register_form" class="button button-login">Valider</button>
 	</div>
-
 {% endblock %}
