@@ -1,19 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@400;600;800&display=swap');
 
-$bg-color: #000014;
-$color-1: #6a6b6c;
-$color-2: #4f89ac;
-$color-3: #dfdfdf;
-$color-4: #75a8be;
-$color-5: #4f89ac;
-
-// variable colors temporarly
-$green: #008000; // used for buttons
-$white: #ffffff; // used for .box
-$black: #000000;
-
-// new identity graphique
-$color-body: #ecebeb;
-$color-blue: #103baf;
-$color-blue-light: #3758b4;
-$color-danger: #ad1010;
+$primary-color: #103baf; // used for many background colors
+$secondary-color: #ecebeb; // used for bg-color and color in the buttons
+$tertiary-color: #dfdfdf; // used for bg-navbar and buttons border
+$font-color: #6a6b6c;
+$black: #000000; // used for another font and return icon
+$white: #ffffff; // used for font in sub-title
+$secondary-color-logo: #4f89ac; // used for border and icon in the navbar
+$color-blue-light: #3758b4; // used for shadow buttons navbar links
+$color-danger: #ad1010; // used for delete buttons
