@@ -94,13 +94,6 @@ body {
     }
 }
 
-.cards {
-    margin-top: 2rem;
-    border-radius: 30px;
-    width: 90%;
-    background: linear-gradient($color-blue, $color-2);
-}
-
 .title {
     margin-bottom: 2rem;
     margin-top: 1rem;
@@ -216,6 +209,14 @@ label {
     height: 95vh;
     overflow: scroll;
 }
+
+.cards {
+    margin-top: 2rem;
+    border-radius: 30px;
+    width: 90%;
+    background: linear-gradient($color-blue, $color-2);
+}
+
 // END INDEX VEHICLE
 // START SHOW VEHICLE
 // END SHOW VEHICLE
