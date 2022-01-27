@@ -35,11 +35,12 @@
                 <div class="progress-element">
                     <div class="progress-label">
                         <p>{{ vehicle.usedHour - part.partUseTime }}h
-                   
-                    </p>
+                            {% if vehicle.usedHour - part.partUseTime >= part.lifespan %}
+                                <i class="fas fa-exclamation-circle"></i>
+                            {% endif %}
+                        </p>
                         <p>max {{ part.lifespan }}h</p>
                     </div>
-
 
                     <div class="progress-container">
                         <progress class="progress-part" value = "{{ vehicle.usedHour - part.partUseTime }}" max = "{{ part.lifespan }}"></progress>
