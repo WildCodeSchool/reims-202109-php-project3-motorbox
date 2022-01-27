@@ -14,14 +14,6 @@ use App\Form\RegistrationFormType;
 
 class UserController extends AbstractController
 {
-    #[Route('/user', name: 'user')]
-    public function index(): Response
-    {
-        return $this->render('user/index.html.twig', [
-            'controller_name' => 'UserController',
-        ]);
-    }
-
     #[Route('/register', name: 'app_register')]
     public function register(
         Request $request,
