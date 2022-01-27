@@ -38,20 +38,9 @@ body {
     padding: 1rem;
 }
 
-.register-form {
-    text-align: right;
-    margin-right: 2rem;
-}
-
 .space-between {
     display: flex;
     justify-content: space-between;
-}
-
-.title-form {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    margin-top: 2rem;
 }
 
 .link-style {
@@ -223,7 +212,35 @@ label {
     margin-top: 2rem;
 }
 
+.register-form {
+    text-align: right;
+    margin-right: 2rem;
+}
+
 // END REGISTER
+// START FORM
+.container-form-part {
+    align-items: center;
+}
+
+.container-form-part input {
+    padding: 0.5rem;
+    font-size: 1rem;;
+    margin-bottom: 1rem;
+}
+
+.form-vehicle input {
+    padding: 0.5rem;
+    font-size: 1rem;;
+    margin-bottom: 1rem;
+}
+
+.title-form {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+// END FORM
 // START INDEX VEHICLE
 
 .vehicleList {
@@ -234,15 +251,6 @@ label {
 // END INDEX VEHICLE
 // START SHOW VEHICLE
 // END SHOW VEHICLE
-// START FORM VEHICLE
-
-.form-vehicle input {
-    padding: 0.5rem;
-    font-size: 1rem;;
-    margin-bottom: 1rem;
-}
-
-// END FORM VEHICLE
 // START NEW VEHICLE
 // END NEW VEHICLE
 // START EDIT VEHICLE
@@ -313,21 +321,7 @@ label {
 }
 
 // END PARTS VEHICLE
-// START PART FORM VEHICLE
-
-.container-form-part {
-    align-items: center;
-}
-
-.container-form-part input {
-    padding: 0.5rem;
-    font-size: 1rem;;
-    margin-bottom: 1rem;
-}
-
-// END PART FORM VEHICLE
 // START FONT AWESOME ICONS
-
 .fa-trash {
     border: none;
 }
