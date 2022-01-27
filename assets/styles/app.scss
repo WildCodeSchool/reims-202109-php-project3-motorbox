@@ -258,6 +258,21 @@ label {
     border-radius: 20px;
 }
 
+::-webkit-progress-value {
+    background: linear-gradient(45deg, #295c9e, #052783);
+    border-radius: 20px;
+}
+
+::-webkit-progress-bar {
+    border-radius : 20px
+}
+
+.progress-label {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 1rem;
+}
+
 .container-parts {
     margin-left: 1rem;
     color:$black;

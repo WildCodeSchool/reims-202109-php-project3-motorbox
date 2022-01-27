@@ -32,8 +32,16 @@
                             <a href="{{ path('vehicle_parts_edit', {vehicle: vehicle.id, part: part.id}) }}"><i class="fas fa-cog"></i></a>
                         </div>
                 </div>
-                <progress class="progress-part" value = "{{ vehicle.usedHour - part.partUseTime }}" max = "{{ part.lifespan }}"> </progress>
-                <input class="part-input" type="checkbox" name="my-checkbox" id="{{ part.id }}">
+                <div class="progress-element">
+                    <div class="progress-label">
+                        <p>{{ vehicle.usedHour - part.partUseTime }}h</p>
+                        <p>{{ part.lifespan }}h</p>
+                    </div>
+                        <div class="progress-container">
+                        <progress class="progress-part" value = "{{ vehicle.usedHour - part.partUseTime }}" max = "{{ part.lifespan }}"></progress>
+                        <input class="part-input" type="checkbox" name="my-checkbox" id="{{ part.id }}">
+                        </div>
+                </div>
             </div>
             <hr>
             {% endfor %}
