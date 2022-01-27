@@ -193,21 +193,11 @@ label {
 }
 // END HOME
 // START LOGIN
-
-.login-row {
-    margin: 1rem;
-    padding: .5rem;
-}
-
-.login-button {
-    margin-top: 1rem;
-    padding: 1rem 2rem;
-}
-
 // END LOGIN
 // START REGISTER
 // END REGISTER
 // START FORM
+// used for /user/* pages and part form and vehicle form
 .form-container {
     width: 70vw;
     margin: 0 auto;
@@ -226,27 +216,6 @@ label {
         }
 
     }
-}
-.container-form-part {
-    align-items: center;
-}
-
-.container-form-part input {
-    padding: 0.5rem;
-    font-size: 1rem;;
-    margin-bottom: 1rem;
-}
-
-.form-vehicle input {
-    padding: 0.5rem;
-    font-size: 1rem;;
-    margin-bottom: 1rem;
-}
-
-.title-form {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    margin-top: 2rem;
 }
 // END FORM
 // START INDEX VEHICLE
