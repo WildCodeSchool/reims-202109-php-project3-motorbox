@@ -1,0 +1,22 @@
+<div class="form-container">
+    {{ form_start(form, {
+        attr: {id: "part_form"}
+    }) }}
+        <div>
+            {{ form_widget(form.name, {
+                attr: {placeholder: 'Nom'}
+            }) }}
+        </div>
+        <div>
+            {{ form_widget(form.lifespan, {
+                attr: {placeholder: 'Durée de vie'}
+            }) }}
+        </div>
+    {{ form_end(form) }}
+</div>
+<div class="button-bar">
+    {% if showDeleteForm %}
+        {{ include('vehicle/_delete_parts_form.html.twig') }}
+    {% endif %}
+    <button type="submit" form="part_form" class="button form-button">{{ button_label|default('Sauvegarder') }}</button>
+</div>
