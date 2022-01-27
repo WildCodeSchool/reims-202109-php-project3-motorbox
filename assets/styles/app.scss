@@ -77,7 +77,7 @@ body {
     text-align: center;
     // font-size: 1rem;
     margin: 2rem;
-    padding: 2rem;
+    padding: .5rem 1rem;
     border-radius: 100px;
     background-color: $color-blue;
     border: 2px solid $color-3;
@@ -94,12 +94,12 @@ body {
 
 // Used for edit and delete button
 .form-button {
-    padding: .5rem 1rem;
 }
 
+// used for /user/* pages
 .button-login {
     margin:1rem;
-    padding: .5rem 1rem;
+    padding: 1rem;
 }
 
 .title {
@@ -188,12 +188,21 @@ label {
 // END NAVBAR
 // START LOGO
 .logo {
-    width: auto;
-    max-height: 50vh;
+    max-width: 90vw;
+    height: auto;
+    margin: 0 auto;
 }
 
 // END LOGO
 // START HOME
+.homepage {
+    width: 70vw;
+    margin: 4em auto;
+    a{
+        display: block;
+        margin-bottom: 3rem;
+    }
+}
 // END HOME
 // START LOGIN
 
