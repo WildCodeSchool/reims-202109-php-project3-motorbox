@@ -316,11 +316,17 @@ body {
     margin-right: 1rem;
 }
 
-.addVehicle {
+.addVehicle,
+.addPart {
     position: fixed;
     right: 0;
-    bottom: 4rem;
+    bottom: 4.5rem;
+    right: .5rem;
     z-index: 1;
+
+    a>img {
+        height: 5rem;
+    }
 }
 
 .fa-cog {
