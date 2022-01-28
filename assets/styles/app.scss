@@ -96,10 +96,6 @@ body {
     font-size: 2rem;
 }
 
-label {
-    margin-right: 10px;;
-}
-
 .return {
     max-width: 10vw;
     margin-left: 1rem;
@@ -231,7 +227,6 @@ label {
 .vehicleList {
     display: flex;
     height: 95vh;
-    overflow: scroll;
 }
 
 .cards {
@@ -327,30 +322,8 @@ label {
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
-.part-button {
-    margin: 1rem;
-    padding: .5rem;
-}
-
 // END PARTS VEHICLE
 // START FONT AWESOME ICONS
-.fa-trash {
-    border: none;
-}
-
-.fa-trash img {
-    width: 2rem;
-}
-
-.fa-trash-part {
-    width: 2rem;
-    margin-left: 1rem;
-    border: none;
-}
-
-.fa-edit-part {
-    width: 2rem;
-}
 
 .icons-button {
     margin-right: 1rem;
