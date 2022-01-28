@@ -121,7 +121,7 @@ body {
         border-top-left-radius: 15%; 
         border-top-right-radius: 15%;
         border-top: 1px solid $secondary-color-logo;
-    
+
         img {
             height: 100px;
             margin-top: 8px;
@@ -138,25 +138,25 @@ body {
             clip-path: circle(0px at 80% 110%);
             -webkit-clip-path: circle(0px at 80% 110%);
             transition: all 1s ease-in;
-        
+
             ul {
                 list-style: none;
             }
-        
+
             li:first-child {
                 margin-top: 2.5rem;
             }
-        
+
             li {
                 margin-bottom: 1.5rem;
             }
-        
+
             a {
                 text-decoration: none;
                 color: $color-blue-light;
             }
         }
-    
+
         .drop-container.open {
             clip-path: circle(100% at 50% 50%);
             -webkit-clip-path: circle(200% at 50% 50%);
