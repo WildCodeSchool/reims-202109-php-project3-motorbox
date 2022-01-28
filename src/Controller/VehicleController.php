@@ -54,14 +54,6 @@ class VehicleController extends AbstractController
         ]);
     }
 
-    #[Route('/{id}', name: 'vehicle_show', methods: ['GET'])]
-    public function show(Vehicle $vehicle): Response
-    {
-        return $this->render('vehicle/show.html.twig', [
-            'vehicle' => $vehicle,
-        ]);
-    }
-
     #[Route('/{id}/edit', name: 'vehicle_edit', methods: ['GET', 'POST'])]
     public function edit(Request $request, Vehicle $vehicle, EntityManagerInterface $entityManager): Response
     {
@@ -125,15 +117,6 @@ class VehicleController extends AbstractController
             'vehicle' => $vehicle,
             'part' => $part,
             'form' => $form,
-        ]);
-    }
-
-    #[Route('/{vehicle}/parts/{part}', name: 'vehicle_parts_show', methods: ['GET'])]
-    public function partsShow(Vehicle $vehicle, Part $part): Response
-    {
-        return $this->render('vehicle/parts_show.html.twig', [
-            'vehicle' => $vehicle,
-            'part' => $part,
         ]);
     }
 
