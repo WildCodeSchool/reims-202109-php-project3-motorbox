@@ -96,10 +96,6 @@ body {
     font-size: 2rem;
 }
 
-label {
-    margin-right: 10px;;
-}
-
 .return {
     max-width: 10vw;
     margin-left: 1rem;
@@ -107,71 +103,68 @@ label {
 
 // END BASE
 // START NAVBAR
-.navbar {
-    position: fixed;
-    display: flex;
-    background-color: $tertiary-color;
-    font-size: 1em;
-    text-align: center;
-    justify-content: space-evenly;
-    align-items: center;
-    bottom: 0;
-    width: 100vw;
-    height: 10%;
-    border-top-left-radius: 15%; 
-    border-top-right-radius: 15%;
-    border-top: 1px solid $secondary-color-logo; 
-}
-
-.navbar img {
-    height: 100px;
-    margin-top: 8px;
-}
 
 .navbar-container{
     padding-top: 4rem;
+
+    .navbar {
+        position: fixed;
+        display: flex;
+        background-color: $tertiary-color;
+        font-size: 1em;
+        text-align: center;
+        justify-content: space-evenly;
+        align-items: center;
+        bottom: 0;
+        width: 100vw;
+        height: 10%;
+        border-top-left-radius: 15%; 
+        border-top-right-radius: 15%;
+        border-top: 1px solid $secondary-color-logo;
+
+        img {
+            height: 100px;
+            margin-top: 8px;
+        }
+
+        .drop-container {
+            position: absolute;
+            bottom: 100%;
+            font-size: 1.7rem;
+            background: $secondary-color;
+            width: 100vw;
+            padding: 1rem;
+            height: 50vh;
+            clip-path: circle(0px at 80% 110%);
+            -webkit-clip-path: circle(0px at 80% 110%);
+            transition: all 1s ease-in;
+
+            ul {
+                list-style: none;
+            }
+
+            li:first-child {
+                margin-top: 2.5rem;
+            }
+
+            li {
+                margin-bottom: 1.5rem;
+            }
+
+            a {
+                text-decoration: none;
+                color: $color-blue-light;
+            }
+        }
+
+        .drop-container.open {
+            clip-path: circle(100% at 50% 50%);
+            -webkit-clip-path: circle(200% at 50% 50%);
+        }
+    }
 }
 
-.drop-container {
-    position: absolute;
-    bottom: 100%;
-    font-size: 1.7rem;
-    background: $secondary-color;
-    width: 100vw;
-    padding: 1rem;
-    height: 50vh;
-    clip-path: circle(0px at 80% 110%);
-    -webkit-clip-path: circle(0px at 80% 110%);
-    transition: all 1s ease-in;
-
-    ul {
-        list-style: none;
-    }
-
-    li:first-child {
-        margin-top: 2.5rem;
-    }
-
-    li {
-        margin-bottom: 1.5rem;
-    }
-
-    a {
-        text-decoration: none;
-        color: $color-blue-light;
-    }
-}
-
-.drop-container.open {
-    clip-path: circle(100% at 50% 50%);
-    -webkit-clip-path: circle(200% at 50% 50%);
-}
-
-.fa-home {
-    color: $secondary-color-logo;
-    font-size: 3rem;
-}
-
+.fa-home,
 .fa-bars {
     color: $secondary-color-logo;
     font-size: 3rem;
@@ -199,10 +192,6 @@ label {
 }
 
 // END HOME
-// START LOGIN
-// END LOGIN
-// START REGISTER
-// END REGISTER
 // START FORM
 // used for /user/* pages and part form and vehicle form
 .form-container {
@@ -231,7 +220,6 @@ label {
 .vehicleList {
     display: flex;
     height: 95vh;
-    overflow: scroll;
 }
 
 .cards {
@@ -242,12 +230,6 @@ label {
 }
 
 // END INDEX VEHICLE
-// START SHOW VEHICLE
-// END SHOW VEHICLE
-// START NEW VEHICLE
-// END NEW VEHICLE
-// START EDIT VEHICLE
-// END EDIT VEHICLE
 // START PARTS VEHICLE
 
 .container-vehicle {
@@ -327,40 +309,24 @@ label {
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
-.part-button {
-    margin: 1rem;
-    padding: .5rem;
-}
-
 // END PARTS VEHICLE
 // START FONT AWESOME ICONS
-.fa-trash {
-    border: none;
-}
-
-.fa-trash img {
-    width: 2rem;
-}
-
-.fa-trash-part {
-    width: 2rem;
-    margin-left: 1rem;
-    border: none;
-}
-
-.fa-edit-part {
-    width: 2rem;
-}
 
 .icons-button {
     margin-right: 1rem;
 }
 
-.addVehicle {
+.addVehicle,
+.addPart {
     position: fixed;
     right: 0;
-    bottom: 4rem;
+    bottom: 4.5rem;
+    right: .5rem;
     z-index: 1;
+
+    a>img {
+        height: 5rem;
+    }
 }
 
 .fa-cog {

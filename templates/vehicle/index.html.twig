@@ -5,7 +5,7 @@
 {% block body %}
     <div class="container-column align-items-center vehicleList">
         <div class="addVehicle" >
-            <a href="{{ path('vehicle_new') }}"><img src="{{ asset('build/images/icons8.svg') }}"></img></a>
+            <a href="{{ path('vehicle_new') }}"><img src="{{ asset('build/images/icons8.png') }}"></img></a>
         </div>
         {% for vehicle in user.vehicles %}
             <a class="button cards" href="{{ path('vehicle_parts', {vehicle: vehicle.id}) }}" >
