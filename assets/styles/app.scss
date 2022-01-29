@@ -251,6 +251,59 @@ body {
     font-size: 2.3rem;
 }
 
+.fa-cog,
+.fa-redo-alt {
+    color: $black;
+    font-size: 24px;
+}
+
+.sub-title {
+    background-color: $primary-color;
+    color: $white;
+    border-radius: 3px;
+    font-size: 1rem;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+    margin-left: 7rem;
+    margin-right: auto;
+    padding: 7px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.container-parts {
+    margin-left: 1rem;
+    color:$black;
+    margin-bottom: 4rem;
+
+    .container-part {
+        margin-top: 1rem;
+        form {
+            div {
+                margin-right: 1rem;
+                align-items: baseline;
+            
+                button {
+                    border: none;
+                    margin-right: 2rem;
+                }
+            }
+        }
+
+        div {
+            .progress-label {
+                display: flex;
+                justify-content: space-between;
+                margin-right: 1rem;
+            
+                p {
+                    font-weight: 400;
+                }
+            
+            }
+        }
+    }
+}
+
 .progress-part {
     width: 80%;
     margin-bottom: 0.2rem;
@@ -275,46 +328,8 @@ body {
     border-radius : 20px
 }
 
-.progress-label {
-    display: flex;
-    justify-content: space-between;
-    margin-right: 1rem;
-
-    p {
-        font-weight: 400;
-    }
-
-}
-
-.container-parts {
-    margin-left: 1rem;
-    color:$black;
-    margin-bottom: 4rem;
-}
-
-.container-part {
-    margin-top: 1rem;
-}
-
-.sub-title {
-    background-color: $primary-color;
-    color: $white;
-    border-radius: 3px;
-    font-size: 1rem;
-    margin-bottom: 3rem;
-    margin-top: 3rem;
-    margin-left: 7rem;
-    margin-right: auto;
-    padding: 7px;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-}
-
 // END PARTS VEHICLE
 // START FONT AWESOME ICONS
-
-.icons-button {
-    margin-right: 1rem;
-}
 
 .addVehicle,
 .addPart {
@@ -329,9 +344,7 @@ body {
     }
 }
 
-.fa-cog {
-    color: $black;
-}
+
 
 .fa-exclamation-circle {
     color:$color-danger;

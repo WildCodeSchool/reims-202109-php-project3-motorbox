@@ -19,13 +19,14 @@
         <div class="container-parts">
             {% for part in vehicle.parts %}
                 <div class="container-part">
-                    <div class="space-between">
+                    <form class="space-between">
                         <label for="{{ part.id }}">{{ part.name }}</label>
-                        <div class="flex icons-button">
+                        <div class="flex">
+                            <button type="submit" class="button-reset"><i class="fas fa-redo-alt"></i></button>
                             <a href="{{ path('vehicle_parts_edit', {vehicle: vehicle.id, part: part.id}) }}"><i class="fas fa-cog"></i></a>
                         </div>
-                    </div>
-                    <div class="progress-element">
+                    </form>
+                    <div>
                         <div class="progress-label">
                             <p>
                                 {{ vehicle.usedHour - part.partUseTime }}h
@@ -35,7 +36,7 @@
                             </p>
                             <p>max {{ part.lifespan }}h</p>
                         </div>
-                        <div class="progress-container">
+                        <div>
                             <progress class="progress-part" value = "{{ vehicle.usedHour - part.partUseTime }}" max = "{{ part.lifespan }}"></progress>
                             <input class="part-input" type="checkbox" name="my-checkbox" id="{{ part.id }}">
                         </div>
