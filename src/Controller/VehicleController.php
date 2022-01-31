@@ -161,4 +161,21 @@ class VehicleController extends AbstractController
             'vehicle' => $vehicle->getId(),
         ], Response::HTTP_SEE_OTHER);
     }
+
+    #[Route('/{vehicle}/parts/{part}/reset', name: 'vehicle_parts_reset', methods: ['POST'])]
+    public function partsReset(
+        Request $request,
+        Vehicle $vehicle,
+        Part $part,
+        EntityManagerInterface $entityManager
+    ): Response {
+        if ($this->isCsrfTokenValid('reset' . $part->getId(), strval($request->request->get('_token')))) {
+            $part->setPartUseTime($vehicle->getUsedHour());
+            $entityManager->flush();
+        }
+
+        return $this->redirectToRoute('vehicle_parts', [
+            'vehicle' => $vehicle->getId(),
+        ], Response::HTTP_SEE_OTHER);
+    }
 }

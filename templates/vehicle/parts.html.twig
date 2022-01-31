@@ -19,8 +19,9 @@
         <div class="container-parts">
             {% for part in vehicle.parts %}
                 <div class="container-part">
-                    <form class="space-between">
-                        <label for="{{ part.id }}">{{ part.name }}</label>
+                    <form class="space-between" method="post" action="{{ path('vehicle_parts_reset', {vehicle: vehicle.id, part: part.id}) }}" onsubmit="return confirm('Êtes vous sûr de vouloir remplacer {{ part.name }} ?');">
+                        <label for="name">{{ part.name }}</label>
+                        <input type="hidden" name="_token" value="{{ csrf_token('reset' ~ part.id) }}">
                         <div class="flex">
                             <button type="submit" class="button-reset"><i class="fas fa-redo-alt"></i></button>
                             <a href="{{ path('vehicle_parts_edit', {vehicle: vehicle.id, part: part.id}) }}"><i class="fas fa-cog"></i></a>
@@ -38,7 +39,6 @@
                         </div>
                         <div>
                             <progress class="progress-part" value = "{{ vehicle.usedHour - part.partUseTime }}" max = "{{ part.lifespan }}"></progress>
-                            <input class="part-input" type="checkbox" name="my-checkbox" id="{{ part.id }}">
                         </div>
                     </div>
                 </div>
