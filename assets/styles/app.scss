@@ -274,11 +274,12 @@ body {
 
     .container-part {
         margin-top: 1rem;
+
         form {
             div {
                 margin-right: 1rem;
                 align-items: baseline;
-            
+
                 button {
                     border: none;
                     margin-right: 2rem;
@@ -291,7 +292,7 @@ body {
                 display: flex;
                 justify-content: space-between;
                 margin-right: 1rem;
-            
+
                 p {
                     font-weight: 400;
                 }
@@ -305,10 +306,6 @@ body {
     width: 80%;
     margin-bottom: 0.2rem;
     border-radius: 20px;
-}
-
-.part-input {
-    display: none;
 }
 
 ::-moz-progress-bar {
