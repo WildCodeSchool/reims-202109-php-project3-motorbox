@@ -83,6 +83,25 @@ class VehicleController extends AbstractController
         return $this->redirectToRoute('vehicle_index', [], Response::HTTP_SEE_OTHER);
     }
 
+    #[Route('/{vehicle}/sync', name: 'vehicle_sync', methods: ['POST'])]
+    public function sync(Request $request, Vehicle $vehicle, EntityManagerInterface $entityManager): Response
+    {
+        if ($this->isCsrfTokenValid('sync' . $vehicle->getId(), strval($request->request->get('_token')))) {
+            $vehicle->setUsedHour(
+                strval(
+                    floatval($vehicle->getUsedHour())
+                    +
+                    rand(5, 10)
+                )
+            );
+            $entityManager->flush();
+        }
+
+        return $this->redirectToRoute('vehicle_parts', [
+            'vehicle' => $vehicle->getId(),
+        ], Response::HTTP_SEE_OTHER);
+    }
+
     #[Route('/{vehicle}/parts', name: 'vehicle_parts', methods: ['GET'])]
     public function parts(Vehicle $vehicle): Response
     {
