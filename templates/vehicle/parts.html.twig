@@ -15,7 +15,22 @@
                 </a>
             </div>
         </div>
-        <h2 class="sub-title">Temps d'utilisation total : {{ vehicle.usedHour }}H</h2>
+
+
+        <div class="sub-title">
+            <h2>Temps d'utilisation total : {{ vehicle.usedHour }}H</h2>
+            <button type="submit" id="sync"><i class="fas fa-sync-alt"></i></button>
+        </div>
+
+
+        <form class="sub-title" method="post" action="" onsubmit="return confirm('Scyncronisation de {{ vehicle.name }} . . .');">
+            <h2>Temps d'utilisation total : {{ vehicle.usedHour }}H</h2>
+            <input type="hidden" name="_token" value="{{ csrf_token('sync' ~ vehicle.id) }}">
+            <button type="submit" class="button-reset"><i class="fas fa-sync-alt"></i></button>
+        </form>
+
+
+
         <div class="container-parts">
             {% for part in vehicle.parts %}
                 <div class="container-part">
