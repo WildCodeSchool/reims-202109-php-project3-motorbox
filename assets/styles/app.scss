@@ -220,6 +220,8 @@ body {
 .vehicleList {
     display: flex;
     height: 95vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 .cards {
