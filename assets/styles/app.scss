@@ -284,6 +284,10 @@ body {
                     border: none;
                     margin-right: 2rem;
                 }
+
+                button:hover {
+                    background-color: $secondary-color;
+                }
             }
         }
 
