@@ -83,6 +83,25 @@ class VehicleController extends AbstractController
         return $this->redirectToRoute('vehicle_index', [], Response::HTTP_SEE_OTHER);
     }
 
+    #[Route('/{vehicle}/sync', name: 'vehicle_sync', methods: ['POST'])]
+    public function sync(Request $request, Vehicle $vehicle, EntityManagerInterface $entityManager): Response
+    {
+        if ($this->isCsrfTokenValid('sync' . $vehicle->getId(), strval($request->request->get('_token')))) {
+            $vehicle->setUsedHour(
+                strval(
+                    floatval($vehicle->getUsedHour())
+                    +
+                    rand(5, 10)
+                )
+            );
+            $entityManager->flush();
+        }
+
+        return $this->redirectToRoute('vehicle_parts', [
+            'vehicle' => $vehicle->getId(),
+        ], Response::HTTP_SEE_OTHER);
+    }
+
     #[Route('/{vehicle}/parts', name: 'vehicle_parts', methods: ['GET'])]
     public function parts(Vehicle $vehicle): Response
     {
@@ -154,6 +173,23 @@ class VehicleController extends AbstractController
     ): Response {
         if ($this->isCsrfTokenValid('delete' . $part->getId(), strval($request->request->get('_token')))) {
             $entityManager->remove($part);
+            $entityManager->flush();
+        }
+
+        return $this->redirectToRoute('vehicle_parts', [
+            'vehicle' => $vehicle->getId(),
+        ], Response::HTTP_SEE_OTHER);
+    }
+
+    #[Route('/{vehicle}/parts/{part}/reset', name: 'vehicle_parts_reset', methods: ['POST'])]
+    public function partsReset(
+        Request $request,
+        Vehicle $vehicle,
+        Part $part,
+        EntityManagerInterface $entityManager
+    ): Response {
+        if ($this->isCsrfTokenValid('reset' . $part->getId(), strval($request->request->get('_token')))) {
+            $part->setPartUseTime($vehicle->getUsedHour());
             $entityManager->flush();
         }
 
